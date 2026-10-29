@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geetham Sarees – Bloom in Tradition, Shine in Style</title>
+  <title>Geetham Sarees – Draped in Elegance</title>
   <style>
     /* ===== RESET & BASE ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -11,7 +11,7 @@
     body {
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       color: #2d2d2d;
-      background: #fafaf8;
+      background: #FBF8F0;
     }
     a { text-decoration: none; color: inherit; }
     button { cursor: pointer; font-family: inherit; }
@@ -19,7 +19,7 @@
 
     /* ===== ANNOUNCEMENT BAR ===== */
     .announcement-bar {
-      background: #7b2d8b;
+      background: #6B1428;
       color: #fff;
       text-align: center;
       font-size: 0.82rem;
@@ -31,7 +31,7 @@
     /* ===== HEADER ===== */
     header {
       background: #fff;
-      border-bottom: 1px solid #ebe8e4;
+      border-bottom: 1px solid #E8DCC0;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -58,6 +58,15 @@
       height: 42px;
       flex-shrink: 0;
     }
+    .logo-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(107,20,40,0.25);
+      border: 2px solid #D4AF37;
+    }
 
     .logo-text {
       display: flex;
@@ -67,18 +76,18 @@
     .logo-text .brand-name {
       font-size: 1.45rem;
       font-weight: 900;
-      color: #7b2d8b;
+      color: #6B1428;
       letter-spacing: -0.5px;
       font-family: Georgia, 'Times New Roman', serif;
     }
     .logo-text .brand-name em {
       font-style: italic;
-      color: #c0392b;
+      color: #B8860B;
     }
     .logo-text .brand-tagline {
       font-size: 0.62rem;
       font-weight: 600;
-      color: #a0689a;
+      color: #C9A227;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       margin-top: 2px;
@@ -93,7 +102,7 @@
       transition: background 0.2s, color 0.2s;
       white-space: nowrap;
     }
-    nav a:hover, nav a.active { background: #f5eef8; color: #7b2d8b; }
+    nav a:hover, nav a.active { background: #FBF4E4; color: #6B1428; }
     .header-actions { display: flex; gap: 16px; align-items: center; flex-shrink: 0; }
     .header-actions button {
       background: none;
@@ -106,12 +115,12 @@
       display: flex; align-items: center; justify-content: center;
       transition: background 0.2s;
     }
-    .header-actions button:hover { background: #f5eef8; color: #7b2d8b; }
-    .cart-btn { position: relative; }
+    .header-actions button:hover { background: #FBF4E4; color: #6B1428; }
+    .cart-btn, .wishlist-btn { position: relative; }
     .cart-count {
       position: absolute;
       top: -4px; right: -4px;
-      background: #c0392b;
+      background: #B8860B;
       color: #fff;
       font-size: 0.65rem;
       font-weight: 700;
@@ -122,8 +131,8 @@
 
     /* ===== SEARCH BAR ===== */
     .search-bar-wrap {
-      background: #fdf8ff;
-      border-bottom: 1px solid #ebe8e4;
+      background: #FBF6E9;
+      border-bottom: 1px solid #E8DCC0;
       padding: 10px 24px;
     }
     .search-bar-inner {
@@ -144,7 +153,7 @@
       color: #333;
     }
     .search-bar-inner button {
-      background: #7b2d8b;
+      background: #6B1428;
       color: #fff;
       border: none;
       padding: 9px 20px;
@@ -152,11 +161,11 @@
       font-weight: 600;
       transition: background 0.2s;
     }
-    .search-bar-inner button:hover { background: #6a2578; }
+    .search-bar-inner button:hover { background: #4A0E1A; }
 
     /* ===== HERO BANNER ===== */
     .hero {
-      background: linear-gradient(135deg, #7b2d8b 0%, #c0392b 50%, #e67e22 100%);
+      background: linear-gradient(135deg, #4A0E1A 0%, #6B1428 45%, #B8860B 100%);
       color: #fff;
       text-align: center;
       padding: 52px 24px 44px;
@@ -177,7 +186,7 @@
     /* ===== CATEGORY PILLS ===== */
     .category-strip {
       background: #fff;
-      border-bottom: 1px solid #ebe8e4;
+      border-bottom: 1px solid #E8DCC0;
       padding: 12px 24px;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -185,6 +194,31 @@
     }
     .category-strip::-webkit-scrollbar { display: none; }
     .category-strip-inner { display: flex; gap: 10px; max-width: 1400px; margin: 0 auto; }
+
+    /* ===== PRICE COLLECTIONS ===== */
+    .price-collections {
+      background: linear-gradient(135deg, #6B1428, #4A0E1A);
+      padding: 12px 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .price-collections::-webkit-scrollbar { display: none; }
+    .price-collections-inner {
+      display: flex; gap: 10px; align-items: center;
+      max-width: 1400px; margin: 0 auto;
+    }
+    .pc-label {
+      color: #E8C65A; font-weight: 800; font-size: 0.85rem;
+      white-space: nowrap; margin-right: 4px;
+    }
+    .price-pill {
+      padding: 7px 16px; border-radius: 30px; white-space: nowrap;
+      border: 1.5px solid #D4AF37; background: transparent;
+      color: #F0C75E; font-weight: 700; font-size: 0.82rem;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .price-pill:hover { background: rgba(212,175,55,0.2); }
+    .price-pill.active { background: #D4AF37; color: #4A0E1A; border-color: #D4AF37; }
     .cat-pill {
       display: flex;
       align-items: center;
@@ -200,8 +234,8 @@
       transition: all 0.2s;
     }
     .cat-pill:hover, .cat-pill.active {
-      background: #7b2d8b;
-      border-color: #7b2d8b;
+      background: #6B1428;
+      border-color: #6B1428;
       color: #fff;
     }
     .cat-pill .emoji { font-size: 1rem; }
@@ -225,7 +259,7 @@
     .sidebar { display: flex; flex-direction: column; gap: 20px; }
     .filter-card {
       background: #fff;
-      border: 1px solid #ebe8e4;
+      border: 1px solid #E8DCC0;
       border-radius: 12px;
       overflow: hidden;
     }
@@ -234,13 +268,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 18px;
-      background: #f8f4fb;
+      background: #FBF6E9;
       font-size: 0.88rem;
       font-weight: 700;
-      color: #7b2d8b;
+      color: #6B1428;
       cursor: pointer;
       user-select: none;
-      border-bottom: 1px solid #ebe8e4;
+      border-bottom: 1px solid #E8DCC0;
     }
     .filter-card-header .toggle { font-size: 1rem; color: #999; }
     .filter-card-body { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; }
@@ -252,8 +286,8 @@
       color: #444;
       cursor: pointer;
     }
-    .filter-option input[type="checkbox"] { accent-color: #7b2d8b; width: 15px; height: 15px; }
-    .filter-option:hover { color: #7b2d8b; }
+    .filter-option input[type="checkbox"] { accent-color: #6B1428; width: 15px; height: 15px; }
+    .filter-option:hover { color: #6B1428; }
     .color-swatches { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 18px; }
     .swatch {
       width: 26px; height: 26px;
@@ -262,16 +296,16 @@
       cursor: pointer;
       transition: transform 0.15s, border-color 0.15s;
     }
-    .swatch:hover, .swatch.active { transform: scale(1.2); border-color: #7b2d8b; }
+    .swatch:hover, .swatch.active { transform: scale(1.2); border-color: #6B1428; }
     .price-range { padding: 14px 18px; }
     .price-range input[type="range"] {
-      width: 100%; accent-color: #7b2d8b; margin: 8px 0;
+      width: 100%; accent-color: #6B1428; margin: 8px 0;
     }
     .price-labels { display: flex; justify-content: space-between; font-size: 0.8rem; color: #777; }
     .clear-filters {
       background: none;
-      border: 1.5px solid #7b2d8b;
-      color: #7b2d8b;
+      border: 1.5px solid #6B1428;
+      color: #6B1428;
       border-radius: 8px;
       padding: 9px;
       font-size: 0.82rem;
@@ -279,7 +313,7 @@
       width: 100%;
       transition: all 0.2s;
     }
-    .clear-filters:hover { background: #7b2d8b; color: #fff; }
+    .clear-filters:hover { background: #6B1428; color: #fff; }
 
     /* ===== PRODUCTS AREA ===== */
     .products-area { display: flex; flex-direction: column; gap: 20px; }
@@ -290,7 +324,7 @@
       flex-wrap: wrap;
       gap: 10px;
       background: #fff;
-      border: 1px solid #ebe8e4;
+      border: 1px solid #E8DCC0;
       border-radius: 10px;
       padding: 12px 18px;
     }
@@ -307,7 +341,7 @@
       background: #fff;
       cursor: pointer;
     }
-    .sort-select:focus { border-color: #7b2d8b; }
+    .sort-select:focus { border-color: #6B1428; }
     .view-toggle { display: flex; gap: 4px; }
     .view-btn {
       background: none;
@@ -318,12 +352,12 @@
       color: #888;
       transition: all 0.2s;
     }
-    .view-btn.active, .view-btn:hover { background: #7b2d8b; border-color: #7b2d8b; color: #fff; }
+    .view-btn.active, .view-btn:hover { background: #6B1428; border-color: #6B1428; color: #fff; }
     .mobile-filter-btn {
       display: none;
       align-items: center;
       gap: 6px;
-      background: #7b2d8b;
+      background: #6B1428;
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -332,19 +366,20 @@
       font-weight: 600;
     }
 
-    /* ===== PRODUCT GRID ===== */
+    /* ===== PRODUCT GRID (dense, 4-per-row like SSPTEX) ===== */
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
-    @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr 1fr; gap: 12px; } }
+    @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 860px)  { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px)  { .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
 
     /* ===== PRODUCT CARD ===== */
     .product-card {
       background: #fff;
-      border: 1px solid #ebe8e4;
+      border: 1px solid #E8DCC0;
       border-radius: 14px;
       overflow: hidden;
       transition: box-shadow 0.25s, transform 0.2s;
@@ -357,7 +392,7 @@
     .card-img-wrap {
       position: relative;
       aspect-ratio: 3/4;
-      background: #f5f0f8;
+      background: #FBF6E9;
       overflow: hidden;
     }
     .card-img-wrap img {
@@ -376,9 +411,9 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-    .badge-new { background: #7b2d8b; color: #fff; }
-    .badge-sale { background: #c0392b; color: #fff; }
-    .badge-bestseller { background: #e67e22; color: #fff; }
+    .badge-new { background: #6B1428; color: #fff; }
+    .badge-sale { background: #B8860B; color: #fff; }
+    .badge-bestseller { background: #B8860B; color: #fff; }
     .badge-limited { background: #27ae60; color: #fff; }
     .card-wishlist {
       position: absolute;
@@ -393,7 +428,7 @@
       transition: all 0.2s;
       backdrop-filter: blur(4px);
     }
-    .card-wishlist:hover, .card-wishlist.active { color: #c0392b; background: #fff; }
+    .card-wishlist:hover, .card-wishlist.active { color: #B8860B; background: #fff; }
     .card-quick-view {
       position: absolute;
       bottom: -40px;
@@ -417,9 +452,61 @@
     .stars { color: #f4a81d; font-size: 0.82rem; letter-spacing: 1px; }
     .rating-count { font-size: 0.75rem; color: #999; }
     .card-price-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-    .price-now { font-size: 1.05rem; font-weight: 800; color: #7b2d8b; }
+    .price-now { font-size: 1.05rem; font-weight: 800; color: #6B1428; }
     .price-old { font-size: 0.83rem; color: #aaa; text-decoration: line-through; }
     .price-off { font-size: 0.75rem; font-weight: 700; color: #27ae60; background: #eafaf2; padding: 2px 7px; border-radius: 20px; }
+
+    /* "Save ₹X" badge (SSPTEX style) */
+    .save-badge {
+      display: inline-block;
+      background: #FBF4E4;
+      color: #B8860B;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      border: 1px solid #E8DCC0;
+    }
+    /* "On Sale" ribbon (top-right diagonal) */
+    .sale-ribbon {
+      position: absolute;
+      top: 12px; right: -34px;
+      background: #B8860B;
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 36px;
+      transform: rotate(45deg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 3;
+    }
+    /* Sold Out overlay + badge */
+    .product-card.sold-out .card-img-wrap img { filter: grayscale(0.7) opacity(0.6); }
+    .sold-out-badge {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%) rotate(-8deg);
+      background: rgba(26,26,26,0.82);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 4px;
+      z-index: 4;
+      white-space: nowrap;
+    }
+    .product-card.sold-out .add-to-cart {
+      background: linear-gradient(90deg,#8a1a30,#5a3030);
+      color: #F0C75E;
+      border: 1.5px solid #B8860B;
+      cursor: not-allowed;
+    }
+    .product-card.sold-out .add-to-cart:hover { background: linear-gradient(90deg,#8a1a30,#5a3030); transform: none; }
     .card-swatches { display: flex; gap: 5px; margin-bottom: 10px; }
     .card-swatch {
       width: 18px; height: 18px;
@@ -428,10 +515,10 @@
       cursor: pointer;
       transition: transform 0.15s;
     }
-    .card-swatch:hover { transform: scale(1.25); border-color: #7b2d8b; }
+    .card-swatch:hover { transform: scale(1.25); border-color: #6B1428; }
     .add-to-cart {
       width: 100%;
-      background: #7b2d8b;
+      background: #6B1428;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -441,14 +528,14 @@
       letter-spacing: 0.03em;
       transition: background 0.2s, transform 0.15s;
     }
-    .add-to-cart:hover { background: #6a2578; transform: scale(1.01); }
+    .add-to-cart:hover { background: #4A0E1A; transform: scale(1.01); }
     .add-to-cart:active { transform: scale(0.98); }
 
     /* ===== OCCASION BANNER ===== */
     .occasion-section {
       background: linear-gradient(135deg, #fff8f0, #fef0f8);
-      border-top: 1px solid #ebe8e4;
-      border-bottom: 1px solid #ebe8e4;
+      border-top: 1px solid #E8DCC0;
+      border-bottom: 1px solid #E8DCC0;
       padding: 32px 24px;
     }
     .occasion-inner { max-width: 1400px; margin: 0 auto; }
@@ -466,14 +553,14 @@
     }
     .occasion-card {
       background: #fff;
-      border: 1px solid #ebe8e4;
+      border: 1px solid #E8DCC0;
       border-radius: 12px;
       padding: 18px 14px;
       text-align: center;
       cursor: pointer;
       transition: all 0.2s;
     }
-    .occasion-card:hover { box-shadow: 0 4px 16px rgba(123,45,139,0.12); transform: translateY(-2px); border-color: #c89fd4; }
+    .occasion-card:hover { box-shadow: 0 4px 16px rgba(123,45,139,0.12); transform: translateY(-2px); border-color: #D4AF37; }
     .occasion-icon { font-size: 2rem; margin-bottom: 8px; }
     .occasion-name { font-size: 0.85rem; font-weight: 700; color: #333; margin-bottom: 4px; }
     .occasion-count { font-size: 0.76rem; color: #999; }
@@ -495,12 +582,12 @@
       display: flex; align-items: center; justify-content: center;
       transition: all 0.2s;
     }
-    .page-btn:hover, .page-btn.active { background: #7b2d8b; border-color: #7b2d8b; color: #fff; }
+    .page-btn:hover, .page-btn.active { background: #6B1428; border-color: #6B1428; color: #fff; }
 
     /* ===== TRUST BADGES ===== */
     .trust-bar {
       background: #fff;
-      border-top: 1px solid #ebe8e4;
+      border-top: 1px solid #E8DCC0;
       padding: 20px 24px;
     }
     .trust-inner {
@@ -517,7 +604,7 @@
 
     /* ===== NEWSLETTER ===== */
     .newsletter {
-      background: linear-gradient(135deg, #7b2d8b, #c0392b);
+      background: linear-gradient(135deg, #6B1428, #B8860B);
       color: #fff;
       padding: 36px 24px;
       text-align: center;
@@ -559,7 +646,7 @@
     }
     @media (max-width: 780px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 460px) { .footer-inner { grid-template-columns: 1fr; } }
-    .footer-brand .logo { color: #e8a0ff; margin-bottom: 12px; display: block; }
+    .footer-brand .logo { color: #E8C65A; margin-bottom: 12px; display: block; }
     .footer-brand p { font-size: 0.83rem; line-height: 1.6; color: #999; margin-bottom: 16px; }
     .social-links { display: flex; gap: 10px; }
     .social-link {
@@ -571,11 +658,11 @@
       color: #ccc;
       transition: all 0.2s;
     }
-    .social-link:hover { background: #7b2d8b; color: #fff; }
+    .social-link:hover { background: #6B1428; color: #fff; }
     .footer-col h4 { font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 14px; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
     .footer-col ul li a { font-size: 0.82rem; color: #999; transition: color 0.2s; }
-    .footer-col ul li a:hover { color: #e8a0ff; }
+    .footer-col ul li a:hover { color: #E8C65A; }
     .footer-bottom {
       max-width: 1400px;
       margin: 28px auto 0;
@@ -621,7 +708,7 @@
     .floating-cart {
       position: fixed;
       bottom: 28px; right: 28px;
-      background: #7b2d8b;
+      background: #6B1428;
       color: #fff;
       border: none;
       border-radius: 50%;
@@ -636,7 +723,7 @@
     .floating-cart-count {
       position: absolute;
       top: 4px; right: 4px;
-      background: #c0392b;
+      background: #B8860B;
       color: #fff;
       font-size: 0.65rem;
       font-weight: 700;
@@ -671,7 +758,7 @@
       .announcement-bar span { margin: 0 6px; display: inline-block; }
 
       /* Header */
-      .logo-icon { width: 34px; height: 34px; }
+      .logo-badge { width: 42px; height: 42px; }
       .logo-text .brand-name { font-size: 1.15rem; }
       .logo-text .brand-tagline { font-size: 0.55rem; letter-spacing: 0.1em; }
       .header-actions button { width: 34px; height: 34px; font-size: 1.05rem; }
@@ -693,6 +780,7 @@
 
       /* Product grid — keep 2 up but tighter */
       .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      #pdpRelated { grid-template-columns: 1fr 1fr !important; }
       .card-body { padding: 10px; }
       .card-name { font-size: 0.82rem; }
       .price-now { font-size: 0.95rem; }
@@ -772,44 +860,30 @@
 <header>
   <div class="header-inner">
     <a class="logo" href="#">
-      <!-- Lotus / saree drape icon -->
-      <svg class="logo-icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="21" cy="21" r="21" fill="url(#logoGrad)"/>
-        <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.9)" transform="rotate(0,21,24)"/>
-        <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.65)" transform="rotate(45,21,24)"/>
-        <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.65)" transform="rotate(-45,21,24)"/>
-        <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.45)" transform="rotate(90,21,24)"/>
-        <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.45)" transform="rotate(-90,21,24)"/>
-        <circle cx="21" cy="22" r="3" fill="#fff"/>
-        <path d="M10 30 Q21 18 32 30" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-        <defs>
-          <linearGradient id="logoGrad" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#7b2d8b"/>
-            <stop offset="100%" stop-color="#c0392b"/>
-          </linearGradient>
-        </defs>
-      </svg>
+      <img src="logo.png" alt="Geetham Sarees" class="logo-badge" />
       <div class="logo-text">
         <span class="brand-name">Geetham <em>Sarees</em></span>
-        <span class="brand-tagline">Bloom in Tradition, Shine in Style</span>
+        <span class="brand-tagline">Draped in Elegance</span>
       </div>
     </a>
     <nav>
-      <a href="#" class="active">All Sarees</a>
-      <a href="#">Silk Sarees</a>
-      <a href="#">Designer</a>
-      <a href="#">Wedding</a>
-      <a href="#">Casual</a>
-      <a href="#">Offers</a>
+      <a href="#" class="active" onclick="navFilter(this,'All');return false;">All Sarees</a>
+      <a href="#" onclick="navFilter(this,'Silk');return false;">Silk Sarees</a>
+      <a href="#" onclick="navFilter(this,'Designer');return false;">Designer</a>
+      <a href="#" onclick="navFilter(this,'Wedding');return false;">Wedding</a>
+      <a href="#" onclick="navFilter(this,'Casual');return false;">Casual</a>
+      <a href="#" onclick="navOffers(this);return false;">Offers</a>
     </nav>
     <div class="header-actions">
-      <button title="Search">🔍</button>
-      <button title="Wishlist">🤍</button>
-      <button class="cart-btn" title="Cart">
+      <button title="Search" onclick="focusSearch()">🔍</button>
+      <button title="Wishlist" onclick="openWishlist()" class="wishlist-btn">
+        🤍
+        <span class="cart-count" id="headerWishCount" style="display:none;">0</span>
+      </button>
+      <button class="cart-btn" title="Cart" onclick="openCart()">
         🛒
         <span class="cart-count" id="headerCartCount">0</span>
       </button>
-      <button title="Account">👤</button>
     </div>
   </div>
 </header>
@@ -817,8 +891,11 @@
 <!-- SEARCH BAR -->
 <div class="search-bar-wrap">
   <div class="search-bar-inner">
-    <input type="text" placeholder="Search for sarees, fabrics, occasions…" />
-    <button>Search</button>
+    <input type="text" id="searchInput" placeholder="Search for sarees, fabrics, occasions…"
+           oninput="runSearch()" onkeydown="if(event.key==='Enter')runSearch()" />
+    <button onclick="runSearch()">Search</button>
+    <button id="searchClearBtn" onclick="clearSearch()" title="Clear"
+            style="display:none;background:#B8860B;padding:9px 14px;">✕</button>
   </div>
 </div>
 
@@ -832,6 +909,22 @@
     <span class="hero-badge">✂️ Custom Blouse</span>
     <span class="hero-badge">↩️ Easy Returns</span>
     <span class="hero-badge">💳 Cash on Delivery</span>
+  </div>
+  <button onclick="openQuiz()" style="margin-top:22px;background:#fff;color:#6B1428;border:none;border-radius:30px;padding:13px 30px;font-size:0.95rem;font-weight:800;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,0.2);">
+    ✨ Find My Perfect Saree
+  </button>
+</div>
+
+<!-- PRICE COLLECTIONS (SSPTEX style) -->
+<div class="price-collections">
+  <div class="price-collections-inner">
+    <span class="pc-label">💰 Shop by Price:</span>
+    <button class="price-pill active" onclick="filterPrice(this,'all')">All Prices</button>
+    <button class="price-pill" onclick="filterPrice(this,'below499')">Below ₹499</button>
+    <button class="price-pill" onclick="filterPrice(this,'500-999')">₹500 – ₹999</button>
+    <button class="price-pill" onclick="filterPrice(this,'1000-1999')">₹1000 – ₹1999</button>
+    <button class="price-pill" onclick="filterPrice(this,'2000-4999')">₹2000 – ₹4999</button>
+    <button class="price-pill" onclick="filterPrice(this,'5000plus')">₹5000 & Above</button>
   </div>
 </div>
 
@@ -859,79 +952,30 @@
 
   <!-- SIDEBAR FILTERS -->
   <aside class="sidebar">
-    <!-- Fabric Type -->
+    <!-- Fabric Type (populated from products) -->
     <div class="filter-card">
-      <div class="filter-card-header">Fabric Type <span class="toggle">▾</span></div>
-      <div class="filter-card-body">
-        <label class="filter-option"><input type="checkbox" checked> Silk (312)</label>
-        <label class="filter-option"><input type="checkbox"> Georgette (248)</label>
-        <label class="filter-option"><input type="checkbox"> Cotton (189)</label>
-        <label class="filter-option"><input type="checkbox"> Chiffon (156)</label>
-        <label class="filter-option"><input type="checkbox"> Linen (94)</label>
-        <label class="filter-option"><input type="checkbox"> Organza (78)</label>
-        <label class="filter-option"><input type="checkbox"> Net (67)</label>
-        <label class="filter-option"><input type="checkbox"> Banarasi (145)</label>
-        <label class="filter-option"><input type="checkbox"> Kanjivaram (88)</label>
-      </div>
+      <div class="filter-card-header">Fabric Type</div>
+      <div class="filter-card-body" id="fabricFilters"></div>
     </div>
 
     <!-- Price Range -->
     <div class="filter-card">
-      <div class="filter-card-header">Price Range <span class="toggle">▾</span></div>
+      <div class="filter-card-header">Price Range</div>
       <div class="price-range">
-        <input type="range" min="500" max="50000" value="20000" id="priceRange"
-               oninput="document.getElementById('priceVal').textContent='₹'+Number(this.value).toLocaleString('en-IN')">
+        <input type="range" min="0" max="35000" value="35000" step="500" id="priceRange"
+               oninput="onPriceSlider(this.value)">
         <div class="price-labels">
-          <span>₹500</span>
-          <span id="priceVal">₹20,000</span>
-          <span>₹50,000</span>
+          <span>₹0</span>
+          <span id="priceVal" style="font-weight:800;color:#6B1428;">Up to ₹35,000</span>
+          <span>₹35k</span>
         </div>
       </div>
     </div>
 
-    <!-- Color -->
+    <!-- Color (populated from products) -->
     <div class="filter-card">
-      <div class="filter-card-header">Color <span class="toggle">▾</span></div>
-      <div class="color-swatches">
-        <div class="swatch active" style="background:#c0392b" title="Red"></div>
-        <div class="swatch" style="background:#7b2d8b" title="Purple"></div>
-        <div class="swatch" style="background:#2980b9" title="Blue"></div>
-        <div class="swatch" style="background:#27ae60" title="Green"></div>
-        <div class="swatch" style="background:#e67e22" title="Orange"></div>
-        <div class="swatch" style="background:#f1c40f" title="Yellow"></div>
-        <div class="swatch" style="background:#e91e8c" title="Pink"></div>
-        <div class="swatch" style="background:#1a1a1a" title="Black"></div>
-        <div class="swatch" style="background:#f5f5f0;border:1.5px solid #ddd" title="Cream"></div>
-        <div class="swatch" style="background:#8B4513" title="Brown"></div>
-        <div class="swatch" style="background:#708090" title="Grey"></div>
-        <div class="swatch" style="background:#008080" title="Teal"></div>
-      </div>
-    </div>
-
-    <!-- Occasion -->
-    <div class="filter-card">
-      <div class="filter-card-header">Occasion <span class="toggle">▾</span></div>
-      <div class="filter-card-body">
-        <label class="filter-option"><input type="checkbox"> Wedding (421)</label>
-        <label class="filter-option"><input type="checkbox"> Festive (318)</label>
-        <label class="filter-option"><input type="checkbox"> Party Wear (245)</label>
-        <label class="filter-option"><input type="checkbox"> Casual (389)</label>
-        <label class="filter-option"><input type="checkbox"> Office Wear (167)</label>
-        <label class="filter-option"><input type="checkbox"> Bridal (98)</label>
-      </div>
-    </div>
-
-    <!-- Work Type -->
-    <div class="filter-card">
-      <div class="filter-card-header">Work / Embellishment <span class="toggle">▾</span></div>
-      <div class="filter-card-body">
-        <label class="filter-option"><input type="checkbox"> Zari Work (178)</label>
-        <label class="filter-option"><input type="checkbox"> Embroidered (234)</label>
-        <label class="filter-option"><input type="checkbox"> Printed (312)</label>
-        <label class="filter-option"><input type="checkbox"> Sequence Work (145)</label>
-        <label class="filter-option"><input type="checkbox"> Stone Work (89)</label>
-        <label class="filter-option"><input type="checkbox"> Plain (267)</label>
-      </div>
+      <div class="filter-card-header">Colour</div>
+      <div class="color-swatches" id="colorFilters"></div>
     </div>
 
     <button class="clear-filters" onclick="clearFilters()">✕ Clear All Filters</button>
@@ -956,8 +1000,9 @@
           <option value="popular">Most Popular</option>
         </select>
         <div class="view-toggle">
-          <button class="view-btn active" title="Grid view" onclick="setView(this,'grid')">⊞</button>
-          <button class="view-btn" title="List view" onclick="setView(this,'list')">☰</button>
+          <button class="view-btn" title="2 per row" onclick="setDensity(this,2)">▦</button>
+          <button class="view-btn active" title="4 per row" onclick="setDensity(this,4)">⊞</button>
+          <button class="view-btn" title="List view" onclick="setDensity(this,'list')">☰</button>
         </div>
       </div>
     </div>
@@ -1023,88 +1068,64 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a class="logo" href="#" style="margin-bottom:12px;">
-        <svg class="logo-icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="21" cy="21" r="21" fill="url(#logoGradF)"/>
-          <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.9)" transform="rotate(0,21,24)"/>
-          <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.65)" transform="rotate(45,21,24)"/>
-          <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.65)" transform="rotate(-45,21,24)"/>
-          <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.45)" transform="rotate(90,21,24)"/>
-          <ellipse cx="21" cy="24" rx="4" ry="8" fill="rgba(255,255,255,0.45)" transform="rotate(-90,21,24)"/>
-          <circle cx="21" cy="22" r="3" fill="#fff"/>
-          <path d="M10 30 Q21 18 32 30" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-          <defs>
-            <linearGradient id="logoGradF" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#9b4daa"/>
-              <stop offset="100%" stop-color="#e05050"/>
-            </linearGradient>
-          </defs>
-        </svg>
+      <a class="logo" href="#" style="margin-bottom:14px;">
+        <img src="logo.png" alt="Geetham Sarees" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #D4AF37;" />
         <div class="logo-text">
-          <span class="brand-name" style="color:#e8a0ff;font-family:Georgia,serif;font-size:1.3rem;">Geetham <em style="color:#ff9090;">Sarees</em></span>
-          <span class="brand-tagline" style="color:#c080d0;">Bloom in Tradition, Shine in Style</span>
+          <span class="brand-name" style="color:#E8C65A;font-family:Georgia,serif;font-size:1.3rem;">Geetham <em style="color:#E8C65A;">Sarees</em></span>
+          <span class="brand-tagline" style="color:#C9A227;">Draped in Elegance</span>
         </div>
       </a>
       <p>Your trusted destination for authentic Indian sarees. We bring the finest craftsmanship from across India directly to your home, with love and care in every thread.</p>
       <div class="social-links">
-        <a class="social-link" href="#" title="Facebook">📘</a>
-        <a class="social-link" href="#" title="Instagram">📸</a>
-        <a class="social-link" href="#" title="Pinterest">📌</a>
-        <a class="social-link" href="#" title="YouTube">▶️</a>
-        <a class="social-link" href="#" title="WhatsApp">💬</a>
+        <a class="social-link" href="#" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+        </a>
+        <a class="social-link" href="#" title="Instagram" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.1A6.74 6.74 0 1 0 18.74 12 6.74 6.74 0 0 0 12 5.26zm0 11.12A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.95-11.4a1.58 1.58 0 1 1-1.57-1.57 1.58 1.58 0 0 1 1.57 1.57z"/></svg>
+        </a>
+        <a class="social-link" href="#" title="Pinterest" aria-label="Pinterest">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.08 2.44 7.58 5.94 9.13-.08-.78-.16-1.97.03-2.82.18-.76 1.14-4.85 1.14-4.85s-.29-.58-.29-1.44c0-1.35.78-2.36 1.76-2.36.83 0 1.23.62 1.23 1.37 0 .84-.53 2.09-.8 3.25-.23.97.49 1.77 1.45 1.77 1.74 0 3.08-1.84 3.08-4.49 0-2.35-1.69-3.99-4.1-3.99-2.79 0-4.43 2.09-4.43 4.26 0 .84.32 1.75.73 2.24.08.1.09.18.07.28l-.27 1.1c-.04.18-.14.22-.33.13-1.23-.57-2-2.37-2-3.81 0-3.1 2.25-5.95 6.5-5.95 3.41 0 6.06 2.43 6.06 5.68 0 3.39-2.14 6.12-5.1 6.12-1 0-1.93-.52-2.25-1.13l-.61 2.33c-.22.85-.82 1.92-1.22 2.57.92.28 1.9.44 2.91.44 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+        </a>
+        <a class="social-link" href="#" title="YouTube" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.12C19.5 3.56 12 3.56 12 3.56s-7.5 0-9.38.52A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.12c1.88.52 9.38.52 9.38.52s7.5 0 9.38-.52a3 3 0 0 0 2.12-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
+        </a>
+        <a class="social-link" href="https://wa.me/919841233922" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .17 11.9C.17 5.46 5.42.2 11.87.2a11.6 11.6 0 0 1 8.27 3.43 11.62 11.62 0 0 1 3.42 8.28c0 6.44-5.25 11.69-11.7 11.69a11.7 11.7 0 0 1-5.6-1.42L.06 24zM6.6 20.13c1.62.96 3.17 1.54 5.26 1.54 5.35 0 9.71-4.35 9.71-9.7 0-5.36-4.34-9.7-9.7-9.7-5.36 0-9.7 4.34-9.7 9.7 0 2.2.64 3.84 1.72 5.56l-.99 3.63 3.7-1.03zm11.39-5.47c-.07-.12-.26-.19-.54-.33-.29-.14-1.7-.84-1.96-.94-.26-.1-.46-.14-.65.14-.19.29-.74.94-.91 1.13-.17.19-.34.21-.62.07-.29-.14-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.6-1.99-.17-.29-.02-.44.12-.59.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.65-1.56-.89-2.14-.23-.56-.47-.48-.65-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38 0 1.4 1.02 2.76 1.17 2.95.14.19 2.01 3.08 4.88 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36z"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Collections</h4>
       <ul>
-        <li><a href="#">Silk Sarees</a></li>
-        <li><a href="#">Designer Sarees</a></li>
-        <li><a href="#">Banarasi Sarees</a></li>
-        <li><a href="#">Kanjivaram Sarees</a></li>
-        <li><a href="#">Wedding Collection</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">Sale Sarees</a></li>
+        <li><a href="#" onclick="footerCategory('Silk');return false;">Silk Sarees</a></li>
+        <li><a href="#" onclick="footerCategory('Designer');return false;">Designer Sarees</a></li>
+        <li><a href="#" onclick="footerCategory('Banarasi');return false;">Banarasi Sarees</a></li>
+        <li><a href="#" onclick="footerCategory('Kanjivaram');return false;">Kanjivaram Sarees</a></li>
+        <li><a href="#" onclick="footerCategory('Wedding');return false;">Wedding Collection</a></li>
+        <li><a href="#" onclick="footerCategory('Casual');return false;">Casual Sarees</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Size Guide</a></li>
-        <li><a href="#">Blouse Stitching</a></li>
-        <li><a href="#">Saree Draping Guide</a></li>
-        <li><a href="#">Gift Cards</a></li>
-        <li><a href="#">Bulk Orders</a></li>
+        <li><a href="#" onclick="openLegal('about');return false;">About Us</a></li>
+        <li><a href="#" onclick="openLegal('sizeguide');return false;">Size Guide</a></li>
+        <li><a href="#" onclick="openLegal('blouse');return false;">Blouse Stitching</a></li>
+        <li><a href="#" onclick="openLegal('draping');return false;">Saree Draping Guide</a></li>
+        <li><a href="#" onclick="openLegal('bulk');return false;">Bulk Orders</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Customer Care</h4>
       <ul>
-        <li><a href="#">Track Your Order</a></li>
-        <li><a href="#">Returns & Exchanges</a></li>
-        <li><a href="#">Shipping Policy</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#" onclick="openLegal('contact');return false;">Contact Us</a></li>
+        <li><a href="#" onclick="openLegal('returns');return false;">Returns &amp; Exchanges</a></li>
+        <li><a href="#" onclick="openLegal('shipping');return false;">Shipping Policy</a></li>
+        <li><a href="#" onclick="openLegal('privacy');return false;">Privacy Policy</a></li>
+        <li><a href="#" onclick="openLegal('terms');return false;">Terms &amp; Conditions</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div>© 2026 Geetham Sarees. All rights reserved.</div>
-    <div class="payment-icons">
-      <span class="pay-icon">VISA</span>
-      <span class="pay-icon">MC</span>
-      <span class="pay-icon">UPI</span>
-      <span class="pay-icon">GPay</span>
-      <span class="pay-icon">PhonePe</span>
-      <span class="pay-icon">COD</span>
-      <span class="pay-icon">EMI</span>
-    </div>
-  </div>
-</footer>
-
   <div class="footer-bottom">
     <div>© 2026 Geetham Sarees. All rights reserved.</div>
     <div class="payment-icons">
@@ -1122,6 +1143,36 @@
 <!-- Admin panel removed from the public storefront.
      Product & photo management is handled securely in the separate
      server-side admin app (geetham-sarees backend with JWT auth). -->
+<!-- ===== SAREE STYLE FINDER QUIZ ===== -->
+<div id="quizOverlay" onclick="closeQuiz()" style="display:none;position:fixed;inset:0;background:rgba(74,14,26,0.6);z-index:850;overflow-y:auto;padding:30px 16px;">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:18px;max-width:560px;margin:0 auto;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <!-- Quiz header -->
+    <div style="background:linear-gradient(135deg,#6B1428,#B8860B);color:#fff;padding:22px 26px;position:relative;">
+      <button onclick="closeQuiz()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,0.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1.1rem;">×</button>
+      <h2 style="font-family:Georgia,serif;font-size:1.3rem;font-weight:900;">✨ Saree Style Finder</h2>
+      <p style="font-size:0.84rem;opacity:0.9;margin-top:4px;">Answer 3 quick questions and we'll handpick your perfect sarees</p>
+      <!-- Progress -->
+      <div style="display:flex;gap:6px;margin-top:14px;">
+        <div class="quiz-dot" id="qdot1" style="flex:1;height:5px;border-radius:3px;background:#fff;"></div>
+        <div class="quiz-dot" id="qdot2" style="flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,0.3);"></div>
+        <div class="quiz-dot" id="qdot3" style="flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,0.3);"></div>
+      </div>
+    </div>
+    <div id="quizBody" style="padding:26px;"></div>
+  </div>
+</div>
+
+<!-- ===== LEGAL / INFO MODAL ===== -->
+<div id="legalOverlay" onclick="closeLegal()" style="display:none;position:fixed;inset:0;background:rgba(74,14,26,0.6);z-index:850;overflow-y:auto;padding:30px 16px;">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;max-width:620px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,0.3);overflow:hidden;">
+    <div style="background:linear-gradient(135deg,#6B1428,#B8860B);color:#fff;padding:20px 26px;position:relative;">
+      <button onclick="closeLegal()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,0.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1.1rem;">×</button>
+      <h2 id="legalTitle" style="font-family:Georgia,serif;font-size:1.3rem;font-weight:900;"></h2>
+    </div>
+    <div id="legalBody" style="padding:26px;font-size:0.88rem;color:#444;line-height:1.7;max-height:65vh;overflow-y:auto;"></div>
+  </div>
+</div>
+
 <!-- TOAST NOTIFICATION -->
 <div id="toast">🛒 Added to cart!</div>
 
@@ -1131,11 +1182,17 @@
   <span class="floating-cart-count" id="floatCartCount">0</span>
 </button>
 
+<!-- FLOATING WHATSAPP CHAT -->
+<a href="#" id="floatingChat" onclick="openWhatsAppChat();return false;"
+   style="position:fixed;bottom:96px;right:28px;background:#25D366;color:#fff;border-radius:30px;padding:12px 18px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:.88rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);z-index:90;">
+  <span style="font-size:1.2rem;">💬</span> Chat
+</a>
+
 <!-- ===== CART DRAWER ===== -->
 <div id="cartOverlay" onclick="closeCart()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;transition:opacity .3s;"></div>
 <div id="cartDrawer" style="position:fixed;top:0;right:-440px;width:420px;max-width:95vw;height:100vh;background:#fff;z-index:501;display:flex;flex-direction:column;box-shadow:-4px 0 30px rgba(0,0,0,.15);transition:right .32s cubic-bezier(.4,0,.2,1);">
-  <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 22px 16px;border-bottom:1px solid #ebe8e4;background:#fdf8ff;">
-    <div style="font-size:1.05rem;font-weight:800;color:#7b2d8b;">🛒 Your Cart <span id="cartDrawerCount" style="background:#7b2d8b;color:#fff;border-radius:20px;padding:2px 10px;font-size:.75rem;margin-left:6px;">0</span></div>
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 22px 16px;border-bottom:1px solid #E8DCC0;background:#FBF6E9;">
+    <div style="font-size:1.05rem;font-weight:800;color:#6B1428;">🛒 Your Cart <span id="cartDrawerCount" style="background:#6B1428;color:#fff;border-radius:20px;padding:2px 10px;font-size:.75rem;margin-left:6px;">0</span></div>
     <button onclick="closeCart()" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#888;line-height:1;">×</button>
   </div>
   <div id="cartItems" style="flex:1;overflow-y:auto;padding:16px 20px;display:flex;flex-direction:column;gap:14px;"></div>
@@ -1143,17 +1200,33 @@
     <div style="font-size:3.5rem;">🛒</div>
     <div style="margin-top:12px;font-size:.95rem;font-weight:600;">Your cart is empty</div>
     <div style="font-size:.82rem;margin-top:4px;">Add some beautiful sarees!</div>
-    <button onclick="closeCart()" style="margin-top:18px;background:#7b2d8b;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:.85rem;font-weight:700;cursor:pointer;">Continue Shopping</button>
+    <button onclick="closeCart()" style="margin-top:18px;background:#6B1428;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:.85rem;font-weight:700;cursor:pointer;">Continue Shopping</button>
   </div>
-  <div id="cartFooter" style="display:none;border-top:1px solid #ebe8e4;padding:18px 22px;background:#fdf8ff;">
+  <div id="cartFooter" style="display:none;border-top:1px solid #E8DCC0;padding:18px 22px;background:#FBF6E9;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
       <span style="font-size:.85rem;color:#888;">Subtotal</span>
-      <span id="cartSubtotal" style="font-size:1.1rem;font-weight:800;color:#7b2d8b;">₹0</span>
+      <span id="cartSubtotal" style="font-size:1.1rem;font-weight:800;color:#6B1428;">₹0</span>
     </div>
     <div id="freeShipMsg" style="font-size:.75rem;color:#27ae60;margin-bottom:10px;display:none;">🎉 You qualify for FREE shipping!</div>
-    <div id="shippingMsg" style="font-size:.75rem;color:#e67e22;margin-bottom:10px;display:none;"></div>
-    <button onclick="openCheckout()" style="width:100%;background:linear-gradient(90deg,#7b2d8b,#c0392b);color:#fff;border:none;border-radius:10px;padding:14px;font-size:.95rem;font-weight:800;cursor:pointer;letter-spacing:.03em;">Proceed to Checkout →</button>
+    <div id="shippingMsg" style="font-size:.75rem;color:#B8860B;margin-bottom:10px;display:none;"></div>
+    <button onclick="openCheckout()" style="width:100%;background:linear-gradient(90deg,#6B1428,#B8860B);color:#fff;border:none;border-radius:10px;padding:14px;font-size:.95rem;font-weight:800;cursor:pointer;letter-spacing:.03em;">Proceed to Checkout →</button>
     <button onclick="closeCart()" style="width:100%;background:none;border:none;color:#888;margin-top:8px;cursor:pointer;font-size:.82rem;">← Continue Shopping</button>
+  </div>
+</div>
+
+<!-- ===== WISHLIST DRAWER ===== -->
+<div id="wishOverlay" onclick="closeWishlist()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;"></div>
+<div id="wishDrawer" style="position:fixed;top:0;right:-440px;width:420px;max-width:95vw;height:100vh;background:#fff;z-index:501;display:flex;flex-direction:column;box-shadow:-4px 0 30px rgba(0,0,0,.15);transition:right .32s cubic-bezier(.4,0,.2,1);">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 22px 16px;border-bottom:1px solid #E8DCC0;background:#FBF6E9;">
+    <div style="font-size:1.05rem;font-weight:800;color:#6B1428;">❤️ Your Wishlist</div>
+    <button onclick="closeWishlist()" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#888;line-height:1;">×</button>
+  </div>
+  <div id="wishItems" style="flex:1;overflow-y:auto;padding:16px 20px;display:flex;flex-direction:column;gap:14px;"></div>
+  <div id="wishEmpty" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#bbb;padding:40px;">
+    <div style="font-size:3.5rem;">💝</div>
+    <div style="margin-top:12px;font-size:.95rem;font-weight:600;">Your wishlist is empty</div>
+    <div style="font-size:.82rem;margin-top:4px;text-align:center;">Tap the 🤍 on any saree to save it here</div>
+    <button onclick="closeWishlist()" style="margin-top:18px;background:#6B1428;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:.85rem;font-weight:700;cursor:pointer;">Browse Sarees</button>
   </div>
 </div>
 
@@ -1162,9 +1235,10 @@
   <div id="pdpModal" onclick="event.stopPropagation()" style="background:#fff;border-radius:18px;max-width:860px;margin:0 auto;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.2);">
     <div style="display:flex;flex-wrap:wrap;">
       <!-- Image side -->
-      <div style="flex:0 0 360px;min-height:420px;background:#f5f0f8;position:relative;">
+      <div style="flex:0 0 360px;min-height:420px;background:#FBF6E9;position:relative;">
         <img id="pdpImg" src="" alt="" style="width:100%;height:100%;object-fit:cover;min-height:420px;" />
         <div id="pdpBadge" style="position:absolute;top:14px;left:14px;display:none;border-radius:20px;padding:4px 12px;font-size:.75rem;font-weight:700;color:#fff;"></div>
+        <div id="pdpSoldOut" style="display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-8deg);background:rgba(26,26,26,0.85);color:#fff;font-size:1rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:10px 24px;border-radius:5px;">Sold Out</div>
         <button id="pdpWish" onclick="togglePDPWish()" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.92);border:none;border-radius:50%;width:38px;height:38px;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">🤍</button>
       </div>
       <!-- Info side -->
@@ -1176,26 +1250,31 @@
         <div id="pdpPriceRow" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"></div>
         <!-- Color picker -->
         <div>
-          <div style="font-size:.8rem;font-weight:700;color:#555;margin-bottom:6px;">Select Colour: <span id="pdpColorLabel" style="color:#7b2d8b;"></span></div>
+          <div style="font-size:.8rem;font-weight:700;color:#555;margin-bottom:6px;">Select Colour: <span id="pdpColorLabel" style="color:#6B1428;"></span></div>
           <div id="pdpColors" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
         </div>
         <!-- Qty -->
         <div>
           <div style="font-size:.8rem;font-weight:700;color:#555;margin-bottom:6px;">Quantity</div>
           <div style="display:flex;align-items:center;gap:0;border:1.5px solid #ddd;border-radius:8px;overflow:hidden;width:fit-content;">
-            <button onclick="pdpQtyChange(-1)" style="background:#f8f4fb;border:none;width:36px;height:36px;font-size:1.1rem;cursor:pointer;color:#7b2d8b;">−</button>
+            <button onclick="pdpQtyChange(-1)" style="background:#FBF6E9;border:none;width:36px;height:36px;font-size:1.1rem;cursor:pointer;color:#6B1428;">−</button>
             <span id="pdpQty" style="width:40px;text-align:center;font-weight:800;font-size:.95rem;">1</span>
-            <button onclick="pdpQtyChange(1)" style="background:#f8f4fb;border:none;width:36px;height:36px;font-size:1.1rem;cursor:pointer;color:#7b2d8b;">+</button>
+            <button onclick="pdpQtyChange(1)" style="background:#FBF6E9;border:none;width:36px;height:36px;font-size:1.1rem;cursor:pointer;color:#6B1428;">+</button>
           </div>
         </div>
         <!-- Description -->
-        <div id="pdpDesc" style="font-size:.83rem;color:#666;line-height:1.6;border-top:1px solid #f0e8f8;padding-top:10px;"></div>
+        <div id="pdpDesc" style="font-size:.83rem;color:#666;line-height:1.6;border-top:1px solid #EADFC2;padding-top:10px;"></div>
         <!-- Highlights -->
         <div style="display:flex;flex-wrap:wrap;gap:6px;" id="pdpHighlights"></div>
-        <!-- CTA -->
-        <div style="display:flex;gap:10px;margin-top:4px;">
-          <button id="pdpAddBtn" onclick="pdpAddToCart()" style="flex:1;background:#7b2d8b;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.9rem;font-weight:800;cursor:pointer;">🛒 Add to Cart</button>
-          <button onclick="pdpBuyNow()" style="flex:1;background:linear-gradient(90deg,#c0392b,#e67e22);color:#fff;border:none;border-radius:10px;padding:13px;font-size:.9rem;font-weight:800;cursor:pointer;">⚡ Buy Now</button>
+        <!-- CTA (in stock) -->
+        <div id="pdpCta" style="display:flex;gap:10px;margin-top:4px;">
+          <button id="pdpAddBtn" onclick="pdpAddToCart()" style="flex:1;background:#6B1428;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.9rem;font-weight:800;cursor:pointer;">🛒 Add to Cart</button>
+          <button onclick="pdpBuyNow()" style="flex:1;background:linear-gradient(90deg,#B8860B,#B8860B);color:#fff;border:none;border-radius:10px;padding:13px;font-size:.9rem;font-weight:800;cursor:pointer;">⚡ Buy Now</button>
+        </div>
+        <!-- CTA (sold out) -->
+        <div id="pdpSoldOutCta" style="display:none;margin-top:4px;">
+          <button disabled style="width:100%;background:linear-gradient(90deg,#8a1a30,#5a3030);color:#F0C75E;border:1.5px solid #B8860B;border-radius:10px;padding:13px;font-size:.9rem;font-weight:800;cursor:not-allowed;opacity:0.95;">� Sold Out — Currently Unavailable</button>
+          <div style="text-align:center;font-size:.76rem;color:#999;margin-top:6px;">Notify us on WhatsApp to be told when it's back in stock.</div>
         </div>
         <div style="display:flex;gap:16px;font-size:.75rem;color:#999;justify-content:center;">
           <span>🚚 Free delivery above ₹999</span>
@@ -1203,6 +1282,47 @@
           <span>✂️ Custom blouse</span>
         </div>
       </div>
+    </div>
+
+    <!-- ===== CUSTOMER REVIEWS ===== -->
+    <div style="border-top:1px solid #EADFC2;padding:24px 28px;background:#FBF8F0;">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+        <h3 style="font-size:1.05rem;color:#6B1428;font-weight:800;">⭐ Customer Reviews</h3>
+        <div id="pdpReviewSummary" style="font-size:.85rem;color:#666;"></div>
+      </div>
+      <div id="pdpReviews" style="display:flex;flex-direction:column;gap:14px;"></div>
+
+      <!-- Pagination -->
+      <div id="pdpReviewPagination" style="display:flex;justify-content:center;gap:6px;margin-top:16px;"></div>
+
+      <!-- Write a review -->
+      <div style="margin-top:20px;border-top:1px dashed #E8DCC0;padding-top:18px;">
+        <div style="font-weight:700;font-size:.9rem;color:#333;margin-bottom:10px;">Write a Review</div>
+        <div style="display:flex;gap:4px;margin-bottom:10px;" id="pdpStarPicker"></div>
+        <input id="pdpReviewName" placeholder="Your name" style="width:100%;border:1.5px solid #ddd;border-radius:8px;padding:9px 12px;font-size:.85rem;outline:none;margin-bottom:8px;box-sizing:border-box;" />
+        <textarea id="pdpReviewText" placeholder="Share your experience with this saree…" rows="3" style="width:100%;border:1.5px solid #ddd;border-radius:8px;padding:9px 12px;font-size:.85rem;outline:none;resize:vertical;box-sizing:border-box;"></textarea>
+        <!-- Photo upload -->
+        <div style="margin-top:10px;">
+          <label for="pdpReviewPhotos" style="display:inline-flex;align-items:center;gap:8px;background:#FBF4E4;border:1.5px dashed #D4AF37;color:#B8860B;border-radius:8px;padding:9px 16px;font-size:.83rem;font-weight:700;cursor:pointer;">
+            📷 Add Photos <span style="font-weight:400;color:#999;">(optional)</span>
+          </label>
+          <input type="file" id="pdpReviewPhotos" accept="image/*" multiple style="display:none;" onchange="previewReviewPhotos(this)" />
+          <div id="pdpReviewPhotoPreview" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;"></div>
+        </div>
+        <button onclick="submitReview()" style="margin-top:12px;background:#6B1428;color:#fff;border:none;border-radius:8px;padding:10px 22px;font-size:.85rem;font-weight:700;cursor:pointer;">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- ===== YOU MAY ALSO LIKE (related products) ===== -->
+    <div style="border-top:1px solid #EADFC2;padding:24px 28px;">
+      <h3 style="font-size:1.05rem;color:#6B1428;font-weight:800;margin-bottom:16px;">💜 You May Also Like</h3>
+      <div id="pdpRelated" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;"></div>
+    </div>
+
+    <!-- ===== FAQ ===== -->
+    <div style="border-top:1px solid #EADFC2;padding:24px 28px;background:#FBF8F0;">
+      <h3 style="font-size:1.05rem;color:#6B1428;font-weight:800;margin-bottom:16px;">❓ Frequently Asked Questions</h3>
+      <div id="pdpFaq"></div>
     </div>
   </div>
 </div>
@@ -1212,11 +1332,11 @@
   <div style="max-width:1000px;margin:0 auto;padding:24px 20px 60px;">
     <!-- Header -->
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:28px;">
-      <button onclick="closeCheckout()" style="background:none;border:none;font-size:1rem;color:#7b2d8b;cursor:pointer;font-weight:700;">← Back to Shop</button>
-      <div style="font-family:Georgia,serif;font-size:1.3rem;font-weight:900;color:#7b2d8b;">Geetham <em style="color:#c0392b;">Sarees</em></div>
+      <button onclick="closeCheckout()" style="background:none;border:none;font-size:1rem;color:#6B1428;cursor:pointer;font-weight:700;">← Back to Shop</button>
+      <div style="font-family:Georgia,serif;font-size:1.3rem;font-weight:900;color:#6B1428;">Geetham <em style="color:#B8860B;">Sarees</em></div>
       <!-- Steps -->
       <div style="margin-left:auto;display:flex;gap:0;align-items:center;font-size:.78rem;">
-        <div id="step1ind" style="display:flex;align-items:center;gap:4px;color:#7b2d8b;font-weight:700;"><span style="background:#7b2d8b;color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;">1</span> Address</div>
+        <div id="step1ind" style="display:flex;align-items:center;gap:4px;color:#6B1428;font-weight:700;"><span style="background:#6B1428;color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;">1</span> Address</div>
         <div style="width:32px;height:2px;background:#ddd;margin:0 6px;"></div>
         <div id="step2ind" style="display:flex;align-items:center;gap:4px;color:#aaa;font-weight:700;"><span style="background:#ddd;color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;">2</span> Review</div>
         <div style="width:32px;height:2px;background:#ddd;margin:0 6px;"></div>
@@ -1228,7 +1348,7 @@
       <!-- Left panel (steps) -->
       <div>
         <!-- STEP 1: Address -->
-        <div id="coStep1" style="background:#fff;border-radius:14px;border:1px solid #ebe8e4;padding:24px;">
+        <div id="coStep1" style="background:#fff;border-radius:14px;border:1px solid #E8DCC0;padding:24px;">
           <h3 style="color:#333;margin-bottom:20px;font-size:1rem;">📦 Delivery Address</h3>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
             <div style="grid-column:span 2;"><label style="font-size:.78rem;color:#666;font-weight:600;display:block;margin-bottom:4px;">Full Name *</label>
@@ -1261,37 +1381,37 @@
           </div>
           <div style="margin-top:18px;">
             <label style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:#555;cursor:pointer;">
-              <input type="checkbox" id="coCOD" style="accent-color:#7b2d8b;width:15px;height:15px;" />
+              <input type="checkbox" id="coCOD" style="accent-color:#6B1428;width:15px;height:15px;" />
               Cash on Delivery (COD)
             </label>
           </div>
-          <button onclick="goToStep2()" style="width:100%;background:#7b2d8b;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.92rem;font-weight:800;cursor:pointer;margin-top:18px;">Continue to Review →</button>
+          <button onclick="goToStep2()" style="width:100%;background:#6B1428;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.92rem;font-weight:800;cursor:pointer;margin-top:18px;">Continue to Review →</button>
         </div>
 
         <!-- STEP 2: Review -->
-        <div id="coStep2" style="display:none;background:#fff;border-radius:14px;border:1px solid #ebe8e4;padding:24px;">
+        <div id="coStep2" style="display:none;background:#fff;border-radius:14px;border:1px solid #E8DCC0;padding:24px;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
             <h3 style="color:#333;font-size:1rem;">📋 Review Your Order</h3>
-            <button onclick="goToStep1()" style="background:none;border:none;color:#7b2d8b;font-size:.83rem;font-weight:700;cursor:pointer;">← Edit Address</button>
+            <button onclick="goToStep1()" style="background:none;border:none;color:#6B1428;font-size:.83rem;font-weight:700;cursor:pointer;">← Edit Address</button>
           </div>
           <!-- Delivery address summary -->
-          <div id="coAddrSummary" style="background:#f8f5ff;border-radius:8px;padding:12px 14px;margin-bottom:18px;font-size:.83rem;color:#555;line-height:1.7;"></div>
+          <div id="coAddrSummary" style="background:#FBF6E9;border-radius:8px;padding:12px 14px;margin-bottom:18px;font-size:.83rem;color:#555;line-height:1.7;"></div>
           <!-- Order items -->
           <div id="coOrderItems" style="display:flex;flex-direction:column;gap:12px;"></div>
           <!-- Coupon -->
           <div style="margin-top:16px;display:flex;gap:8px;">
             <input id="couponInput" placeholder="Coupon code (e.g. WELCOME10)" style="flex:1;border:1.5px solid #ddd;border-radius:8px;padding:9px 14px;font-size:.84rem;outline:none;text-transform:uppercase;" />
-            <button onclick="applyCoupon()" style="background:#7b2d8b;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:.83rem;font-weight:700;cursor:pointer;">Apply</button>
+            <button onclick="applyCoupon()" style="background:#6B1428;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:.83rem;font-weight:700;cursor:pointer;">Apply</button>
           </div>
           <div id="couponMsg" style="font-size:.78rem;margin-top:6px;"></div>
-          <button onclick="goToStep3()" style="width:100%;background:#7b2d8b;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.92rem;font-weight:800;cursor:pointer;margin-top:18px;">Continue to Payment →</button>
+          <button onclick="goToStep3()" style="width:100%;background:#6B1428;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.92rem;font-weight:800;cursor:pointer;margin-top:18px;">Continue to Payment →</button>
         </div>
 
         <!-- STEP 3: Payment -->
-        <div id="coStep3" style="display:none;background:#fff;border-radius:14px;border:1px solid #ebe8e4;padding:24px;">
+        <div id="coStep3" style="display:none;background:#fff;border-radius:14px;border:1px solid #E8DCC0;padding:24px;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
             <h3 style="color:#333;font-size:1rem;">✅ Confirm Your Order</h3>
-            <button onclick="goToStep2()" style="background:none;border:none;color:#7b2d8b;font-size:.83rem;font-weight:700;cursor:pointer;">← Back</button>
+            <button onclick="goToStep2()" style="background:none;border:none;color:#6B1428;font-size:.83rem;font-weight:700;cursor:pointer;">← Back</button>
           </div>
 
           <!-- How it works -->
@@ -1308,24 +1428,24 @@
           <!-- Payment preference -->
           <div style="font-size:.8rem;font-weight:700;color:#555;margin-bottom:8px;">Preferred payment (tell us in chat):</div>
           <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
-            <label style="display:flex;align-items:center;gap:12px;border:1.5px solid #7b2d8b;border-radius:10px;padding:13px;cursor:pointer;" id="payUPI">
-              <input type="radio" name="payMethod" value="upi" checked style="accent-color:#7b2d8b;" onclick="selectPay('upi')" />
+            <label style="display:flex;align-items:center;gap:12px;border:1.5px solid #6B1428;border-radius:10px;padding:13px;cursor:pointer;" id="payUPI">
+              <input type="radio" name="payMethod" value="upi" checked style="accent-color:#6B1428;" onclick="selectPay('upi')" />
               <span style="font-size:1.3rem;">📱</span>
               <div><div style="font-weight:700;font-size:.87rem;">UPI (GPay / PhonePe / Paytm)</div><div style="font-size:.75rem;color:#999;">We'll send a UPI number / QR</div></div>
             </label>
             <label style="display:flex;align-items:center;gap:12px;border:1.5px solid #ddd;border-radius:10px;padding:13px;cursor:pointer;" id="payCOD">
-              <input type="radio" name="payMethod" value="cod" style="accent-color:#7b2d8b;" onclick="selectPay('cod')" />
+              <input type="radio" name="payMethod" value="cod" style="accent-color:#6B1428;" onclick="selectPay('cod')" />
               <span style="font-size:1.3rem;">💵</span>
               <div><div style="font-weight:700;font-size:.87rem;">Cash on Delivery</div><div style="font-size:.75rem;color:#999;">Pay when your order arrives</div></div>
             </label>
             <label style="display:flex;align-items:center;gap:12px;border:1.5px solid #ddd;border-radius:10px;padding:13px;cursor:pointer;" id="payBank">
-              <input type="radio" name="payMethod" value="bank" style="accent-color:#7b2d8b;" onclick="selectPay('bank')" />
+              <input type="radio" name="payMethod" value="bank" style="accent-color:#6B1428;" onclick="selectPay('bank')" />
               <span style="font-size:1.3rem;">🏦</span>
               <div><div style="font-weight:700;font-size:.87rem;">Bank Transfer</div><div style="font-size:.75rem;color:#999;">We'll share account details</div></div>
             </label>
           </div>
 
-          <div id="coPayTotal" style="background:#f8f5ff;border-radius:10px;padding:14px;margin-bottom:16px;font-size:.88rem;color:#555;"></div>
+          <div id="coPayTotal" style="background:#FBF6E9;border-radius:10px;padding:14px;margin-bottom:16px;font-size:.88rem;color:#555;"></div>
 
           <button onclick="placeOrder()" style="width:100%;background:#25D366;color:#fff;border:none;border-radius:10px;padding:14px;font-size:.98rem;font-weight:800;cursor:pointer;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:8px;" id="placeOrderBtn">
             <span style="font-size:1.2rem;">💬</span> Place Order on WhatsApp
@@ -1335,15 +1455,15 @@
       </div>
 
       <!-- Right: Order summary sidebar -->
-      <div style="background:#fff;border-radius:14px;border:1px solid #ebe8e4;padding:20px;position:sticky;top:24px;">
+      <div style="background:#fff;border-radius:14px;border:1px solid #E8DCC0;padding:20px;position:sticky;top:24px;">
         <div style="font-weight:800;font-size:.95rem;color:#333;margin-bottom:14px;">Order Summary</div>
         <div id="coSideItems" style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;max-height:280px;overflow-y:auto;"></div>
-        <div style="border-top:1px solid #f0e8f8;padding-top:12px;display:flex;flex-direction:column;gap:8px;font-size:.85rem;color:#666;">
+        <div style="border-top:1px solid #EADFC2;padding-top:12px;display:flex;flex-direction:column;gap:8px;font-size:.85rem;color:#666;">
           <div style="display:flex;justify-content:space-between;"><span>Subtotal</span><span id="coSideSubtotal" style="font-weight:700;"></span></div>
           <div id="coSideDiscountRow" style="display:none;justify-content:space-between;color:#27ae60;"><span>Discount</span><span id="coSideDiscount" style="font-weight:700;"></span></div>
           <div style="display:flex;justify-content:space-between;"><span>Shipping</span><span id="coSideShipping" style="font-weight:700;"></span></div>
-          <div style="display:flex;justify-content:space-between;border-top:2px solid #7b2d8b;padding-top:10px;font-size:1rem;font-weight:800;">
-            <span style="color:#333;">Total</span><span id="coSideTotal" style="color:#7b2d8b;"></span>
+          <div style="display:flex;justify-content:space-between;border-top:2px solid #6B1428;padding-top:10px;font-size:1rem;font-weight:800;">
+            <span style="color:#333;">Total</span><span id="coSideTotal" style="color:#6B1428;"></span>
           </div>
         </div>
         <div style="margin-top:14px;font-size:.72rem;color:#aaa;line-height:1.7;">
@@ -1358,18 +1478,18 @@
 <!-- ===== ORDER SUCCESS PAGE ===== -->
 <div id="successPage" style="display:none;position:fixed;inset:0;background:#f4f0fa;z-index:800;overflow-y:auto;">
   <div style="max-width:580px;margin:60px auto;padding:0 20px;text-align:center;">
-    <div style="background:#fff;border-radius:20px;border:1px solid #ebe8e4;padding:40px;box-shadow:0 8px 40px rgba(123,45,139,.1);">
+    <div style="background:#fff;border-radius:20px;border:1px solid #E8DCC0;padding:40px;box-shadow:0 8px 40px rgba(123,45,139,.1);">
       <div style="font-size:5rem;margin-bottom:12px;">🎉</div>
       <h1 style="color:#27ae60;font-size:1.8rem;margin-bottom:8px;">Order Sent!</h1>
       <p style="color:#666;margin-bottom:6px;">Your order has been sent to us on WhatsApp. We'll confirm shortly!</p>
-      <div id="successOrderNum" style="background:#f8f5ff;border-radius:8px;padding:10px 20px;display:inline-block;margin:16px 0;font-weight:800;color:#7b2d8b;font-size:1.05rem;"></div>
-      <div id="successDetails" style="text-align:left;background:#f8f5ff;border-radius:12px;padding:16px;margin-bottom:20px;font-size:.84rem;color:#555;line-height:1.8;"></div>
+      <div id="successOrderNum" style="background:#FBF6E9;border-radius:8px;padding:10px 20px;display:inline-block;margin:16px 0;font-weight:800;color:#6B1428;font-size:1.05rem;"></div>
+      <div id="successDetails" style="text-align:left;background:#FBF6E9;border-radius:12px;padding:16px;margin-bottom:20px;font-size:.84rem;color:#555;line-height:1.8;"></div>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="background:#fff8f0;border:1px solid #ffe0a0;border-radius:8px;padding:12px;font-size:.8rem;color:#e67e22;">
+        <div style="background:#fff8f0;border:1px solid #ffe0a0;border-radius:8px;padding:12px;font-size:.8rem;color:#B8860B;">
           � We'll confirm your order & payment on WhatsApp<br/>
           📱 You'll get updates once your order is dispatched
         </div>
-        <button onclick="continueShopping()" style="background:#7b2d8b;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.92rem;font-weight:800;cursor:pointer;">Continue Shopping 🛍️</button>
+        <button onclick="continueShopping()" style="background:#6B1428;color:#fff;border:none;border-radius:10px;padding:13px;font-size:.92rem;font-weight:800;cursor:pointer;">Continue Shopping 🛍️</button>
       </div>
     </div>
   </div>
@@ -1377,21 +1497,21 @@
 
 <style>
   /* Cart item in drawer */
-  .ci { display:flex; gap:12px; align-items:flex-start; background:#fdf8ff; border-radius:10px; padding:12px; border:1px solid #f0e8f8; }
+  .ci { display:flex; gap:12px; align-items:flex-start; background:#FBF6E9; border-radius:10px; padding:12px; border:1px solid #EADFC2; }
   .ci img { width:60px; height:78px; object-fit:cover; border-radius:7px; flex-shrink:0; }
   .ci-info { flex:1; }
   .ci-name { font-size:.83rem; font-weight:700; color:#222; line-height:1.35; margin-bottom:4px; }
   .ci-color { font-size:.72rem; color:#888; margin-bottom:6px; }
-  .ci-price { font-size:.92rem; font-weight:800; color:#7b2d8b; }
-  .ci-qty { display:flex; align-items:center; gap:0; border:1.5px solid #e0d8f0; border-radius:6px; overflow:hidden; margin-top:8px; width:fit-content; }
-  .ci-qty button { background:#f8f4fb; border:none; width:28px; height:28px; font-size:.95rem; cursor:pointer; color:#7b2d8b; font-weight:800; }
+  .ci-price { font-size:.92rem; font-weight:800; color:#6B1428; }
+  .ci-qty { display:flex; align-items:center; gap:0; border:1.5px solid #E3D3A8; border-radius:6px; overflow:hidden; margin-top:8px; width:fit-content; }
+  .ci-qty button { background:#FBF6E9; border:none; width:28px; height:28px; font-size:.95rem; cursor:pointer; color:#6B1428; font-weight:800; }
   .ci-qty span { width:32px; text-align:center; font-weight:800; font-size:.85rem; }
   .ci-remove { background:none; border:none; color:#ccc; cursor:pointer; font-size:1rem; padding:2px 6px; align-self:flex-start; }
-  .ci-remove:hover { color:#c0392b; }
+  .ci-remove:hover { color:#B8860B; }
   /* Checkout item row */
-  .co-item { display:flex; gap:12px; align-items:center; padding:10px 0; border-bottom:1px solid #f5f0fc; }
+  .co-item { display:flex; gap:12px; align-items:center; padding:10px 0; border-bottom:1px solid #F3E9D2; }
   .co-item img { width:56px; height:72px; object-fit:cover; border-radius:7px; }
-  .highlight-chip { background:#f5eef8; color:#7b2d8b; border-radius:20px; padding:3px 10px; font-size:.72rem; font-weight:700; }
+  .highlight-chip { background:#FBF4E4; color:#6B1428; border-radius:20px; padding:3px 10px; font-size:.72rem; font-weight:700; }
 </style>
 
 <script>
@@ -1410,7 +1530,7 @@
       description:"Magnificent Paithani silk with signature peacock and lotus motifs woven with real gold & silver threads. A bridal masterpiece from Maharashtra.",
       highlights:["Paithani Weave","Peacock Motifs","Real Zari","Bridal Heirloom"] },
 
-    { id:3,  name:"Mysore Crepe Silk Saree",               category:"Silk",       fabric:"Mysore Silk",       price:4599,  oldPrice:6499,  rating:4.6, reviews:178, badge:null,
+    { id:3,  name:"Mysore Crepe Silk Saree",               category:"Silk",       fabric:"Mysore Silk",       price:4599,  oldPrice:6499,  rating:4.6, reviews:178, badge:null, soldOut:true,
       colors:["#4B0082","#8B0000","#006400"], colorNames:["Indigo","Maroon","Forest Green"],
       image:"https://picsum.photos/seed/geetham3/400/530",
       description:"Pure Mysore crepe silk with traditional contrast zari border. Naturally soft with an unmatched lustrous drape.",
@@ -1493,7 +1613,7 @@
       description:"Elegant linen saree with delicate block prints. Cool and breathable — the ideal choice for air-conditioned offices.",
       highlights:["Linen Fabric","Block Print","Office Wear","Breathable"] },
 
-    { id:16, name:"Bengal Linen Handwoven Saree",          category:"Linen",      fabric:"Linen",             price:2599,  oldPrice:3499,  rating:4.5, reviews:167, badge:"new",
+    { id:16, name:"Bengal Linen Handwoven Saree",          category:"Linen",      fabric:"Linen",             price:2599,  oldPrice:3499,  rating:4.5, reviews:167, badge:"new", soldOut:true,
       colors:["#8B0000","#DAA520","#4B0082"], colorNames:["Brick Red","Mustard","Lavender"],
       image:"https://picsum.photos/seed/geetham16/400/530",
       description:"Handwoven Bengal linen saree with traditional jamdani-inspired motifs. Light as air and rich in heritage.",
@@ -1575,7 +1695,7 @@
       description:"Authentic Assam Muga silk Mekhela Chador. The natural golden sheen of Muga silk is unique to Assam — recognised by a GI tag.",
       highlights:["GI Tagged","Muga Silk","Assam Heritage","Natural Golden Sheen"] },
 
-    { id:29, name:"Patan Patola Double-Ikat Saree",        category:"Wedding",    fabric:"Silk",              price:31999, oldPrice:45000, rating:5.0, reviews:18,  badge:"limited",
+    { id:29, name:"Patan Patola Double-Ikat Saree",        category:"Wedding",    fabric:"Silk",              price:31999, oldPrice:45000, rating:5.0, reviews:18,  badge:"limited", soldOut:true,
       colors:["#8B0000","#4B0082","#2E8B57"], colorNames:["Royal Red","Grape","Jade Green"],
       image:"https://picsum.photos/seed/geetham29/400/530",
       description:"Rare Patan Patola double-ikat silk saree from Gujarat. Each saree takes 6–12 months to weave. Only a few master weavers remain — a true collector's piece.",
@@ -1619,19 +1739,32 @@
   function renderProducts(products) {
     const grid = document.getElementById('productGrid');
     if (!products.length) {
-      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#bbb;"><div style="font-size:3rem;">🥻</div><p style="margin-top:12px;">No sarees found. Try clearing filters.</p></div>';
+      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#999;">
+        <div style="font-size:3rem;">🔍</div>
+        <p style="margin-top:12px;font-weight:700;color:#6B1428;">No sarees found${currentSearch ? ` for "${currentSearch}"` : ''}.</p>
+        <p style="margin-top:4px;font-size:.85rem;">Try a different search term or clear your filters.</p>
+        <button onclick="clearSearch();clearFilters();" style="margin-top:16px;background:#6B1428;color:#fff;border:none;border-radius:8px;padding:10px 22px;font-weight:700;cursor:pointer;">Clear Search &amp; Filters</button>
+      </div>`;
       return;
     }
     grid.innerHTML = products.map(p => {
-      const discount = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+      const save = p.oldPrice ? (p.oldPrice - p.price) : 0;
       const badgeHtml = p.badge ? `<span class="card-badge badge-${p.badge}">${{bestseller:'🔥 Bestseller',sale:'🏷️ Sale',new:'✨ New',limited:'⏳ Limited'}[p.badge]}</span>` : '';
+      const ribbonHtml = (p.oldPrice && !p.soldOut) ? `<span class="sale-ribbon">On Sale</span>` : '';
+      const soldOutHtml = p.soldOut ? `<span class="sold-out-badge">Sold Out</span>` : '';
       const swatchesHtml = p.colors.map((c,i) => `<div class="card-swatch" style="background:${c}" title="${p.colorNames[i]}"></div>`).join('');
+      const saveHtml = save > 0 ? `<div class="save-badge">Save ${fmt(save)}</div>` : '';
+      const cartBtn = p.soldOut
+        ? `<button class="add-to-cart" onclick="event.stopPropagation();showToast('😔 This saree is sold out')">🚫 Sold Out</button>`
+        : `<button class="add-to-cart" onclick="event.stopPropagation();quickAddToCart(${p.id})">🛒 Add to Cart</button>`;
       return `
-        <div class="product-card" onclick="openPDP(${p.id})">
+        <div class="product-card${p.soldOut ? ' sold-out' : ''}" onclick="openPDP(${p.id})">
           <div class="card-img-wrap">
             <img src="${p.image}" alt="${p.name}" loading="lazy" />
             ${badgeHtml}
-            <button class="card-wishlist" onclick="event.stopPropagation();toggleWish(this)" title="Wishlist">🤍</button>
+            ${ribbonHtml}
+            ${soldOutHtml}
+            <button class="card-wishlist${isWished(p.id)?' active':''}" onclick="event.stopPropagation();toggleWish(this,${p.id})" title="Wishlist">${isWished(p.id)?'❤️':'🤍'}</button>
             <button class="card-quick-view" onclick="event.stopPropagation();openPDP(${p.id})">Quick View</button>
           </div>
           <div class="card-body">
@@ -1643,21 +1776,116 @@
             </div>
             <div class="card-price-row">
               <span class="price-now">${fmt(p.price)}</span>
-              ${p.oldPrice ? `<span class="price-old">${fmt(p.oldPrice)}</span><span class="price-off">${discount}% off</span>` : ''}
+              ${p.oldPrice ? `<span class="price-old">${fmt(p.oldPrice)}</span>` : ''}
             </div>
+            ${saveHtml}
             <div class="card-swatches">${swatchesHtml}</div>
-            <button class="add-to-cart" onclick="event.stopPropagation();quickAddToCart(${p.id})">🛒 Add to Cart</button>
+            ${cartBtn}
           </div>
         </div>`;
     }).join('');
   }
 
-  // ===== WISHLIST TOGGLE =====
-  function toggleWish(btn) { btn.classList.toggle('active'); btn.textContent = btn.classList.contains('active') ? '❤️' : '🤍'; }
+  // ===== WISHLIST =====
+  let wishlist = JSON.parse(localStorage.getItem('gs_wishlist') || '[]'); // array of product ids
+  const saveWishlist = () => localStorage.setItem('gs_wishlist', JSON.stringify(wishlist));
+  const isWished = (id) => wishlist.includes(id);
+
+  function updateWishCount() {
+    const el = document.getElementById('headerWishCount');
+    if (!el) return;
+    if (wishlist.length) { el.style.display = 'flex'; el.textContent = wishlist.length; }
+    else el.style.display = 'none';
+  }
+
+  function toggleWish(btn, id) {
+    if (wishlist.includes(id)) {
+      wishlist = wishlist.filter(x => x !== id);
+      btn.classList.remove('active'); btn.textContent = '🤍';
+      showToast('🤍 Removed from wishlist');
+    } else {
+      wishlist.push(id);
+      btn.classList.add('active'); btn.textContent = '❤️';
+      showToast('❤️ Added to wishlist!');
+    }
+    saveWishlist();
+    updateWishCount();
+  }
+
+  // ===== WISHLIST DRAWER =====
+  function openWishlist() {
+    const items = PRODUCTS.filter(p => wishlist.includes(p.id));
+    const body = document.getElementById('wishItems');
+    const empty = document.getElementById('wishEmpty');
+    if (!items.length) {
+      body.innerHTML = ''; empty.style.display = 'flex';
+    } else {
+      empty.style.display = 'none';
+      body.innerHTML = items.map(p => `
+        <div class="ci">
+          <img src="${p.image}" alt="${p.name}" />
+          <div class="ci-info">
+            <div class="ci-name">${p.name}</div>
+            <div class="ci-price">${fmt(p.price)}</div>
+            <div style="display:flex;gap:6px;margin-top:8px;">
+              ${p.soldOut
+                ? `<span style="font-size:.76rem;color:#8a1a30;font-weight:700;">🚫 Sold Out</span>`
+                : `<button onclick="wishToCart(${p.id})" style="background:#6B1428;color:#fff;border:none;border-radius:6px;padding:6px 12px;font-size:.76rem;font-weight:700;cursor:pointer;">🛒 Add to Cart</button>`}
+              <button onclick="openPDP(${p.id});closeWishlist();" style="background:#FBF4E4;border:1px solid #E8DCC0;color:#6B1428;border-radius:6px;padding:6px 12px;font-size:.76rem;font-weight:700;cursor:pointer;">View</button>
+            </div>
+          </div>
+          <button class="ci-remove" onclick="removeWish(${p.id})" title="Remove">×</button>
+        </div>`).join('');
+    }
+    document.getElementById('wishOverlay').style.display = 'block';
+    document.getElementById('wishDrawer').style.right = '0';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeWishlist() {
+    document.getElementById('wishOverlay').style.display = 'none';
+    document.getElementById('wishDrawer').style.right = '-440px';
+    document.body.style.overflow = '';
+  }
+  function removeWish(id) {
+    wishlist = wishlist.filter(x => x !== id);
+    saveWishlist(); updateWishCount(); openWishlist();
+    applyFilters(); // refresh hearts on grid
+  }
+  function wishToCart(id) {
+    const p = PRODUCTS.find(x => x.id === id);
+    addToCartItem({ id: p.id, name: p.name, price: p.price, image: p.image, color: p.colorNames[0], colorHex: p.colors[0] });
+    closeWishlist(); openCart();
+  }
+
+  // ===== NAV LINKS =====
+  function navFilter(el, cat) {
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    el.classList.add('active');
+    // sync category pills
+    currentCategory = cat;
+    document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
+    const pill = Array.from(document.querySelectorAll('.cat-pill')).find(b => b.textContent.includes(cat) || (cat==='All' && b.textContent.includes('All')));
+    if (pill) pill.classList.add('active');
+    currentSearch = ''; document.getElementById('searchInput').value = '';
+    document.getElementById('searchClearBtn').style.display = 'none';
+    applyFilters();
+    document.querySelector('.shop-layout').scrollIntoView({ behavior:'smooth' });
+  }
+  function navOffers(el) {
+    // "Offers" = show discounted items, sorted by biggest saving
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    el.classList.add('active');
+    currentCategory = 'All'; currentPriceRange = 'all'; currentSearch = '';
+    document.getElementById('searchInput').value = '';
+    renderProducts(PRODUCTS.filter(p => p.oldPrice).sort((a,b)=>(b.oldPrice-b.price)-(a.oldPrice-a.price)));
+    document.getElementById('productsCount').innerHTML = `Showing our best <strong>offers</strong> 🏷️`;
+    document.querySelector('.shop-layout').scrollIntoView({ behavior:'smooth' });
+  }
 
   // ===== QUICK ADD (from grid) =====
   function quickAddToCart(id) {
     const p = PRODUCTS.find(x => x.id === id);
+    if (p.soldOut) { showToast('😔 This saree is sold out'); return; }
     addToCartItem({ id: p.id, name: p.name, price: p.price, image: p.image, color: p.colorNames[0], colorHex: p.colors[0] });
     openCart();
   }
@@ -1748,25 +1976,241 @@
 
     const discount = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
     document.getElementById('pdpRating').innerHTML = `<span style="color:#f4a81d;font-size:.9rem">${'★'.repeat(Math.floor(p.rating))}</span><span style="font-size:.8rem;color:#888">${p.rating} (${p.reviews} reviews)</span>`;
-    document.getElementById('pdpPriceRow').innerHTML = `<span style="font-size:1.3rem;font-weight:900;color:#7b2d8b">${fmt(p.price)}</span>${p.oldPrice?`<span style="font-size:.9rem;color:#aaa;text-decoration:line-through">${fmt(p.oldPrice)}</span><span style="background:#e8fff2;color:#27ae60;border-radius:20px;padding:3px 10px;font-size:.78rem;font-weight:800">${discount}% off</span>`:''}`;
+    document.getElementById('pdpPriceRow').innerHTML = `<span style="font-size:1.3rem;font-weight:900;color:#6B1428">${fmt(p.price)}</span>${p.oldPrice?`<span style="font-size:.9rem;color:#aaa;text-decoration:line-through">${fmt(p.oldPrice)}</span><span style="background:#e8fff2;color:#27ae60;border-radius:20px;padding:3px 10px;font-size:.78rem;font-weight:800">${discount}% off</span>`:''}`;
 
     // Badge
     const bd = document.getElementById('pdpBadge');
-    if (p.badge) { bd.style.display='block'; bd.textContent={bestseller:'🔥 Bestseller',sale:'🏷️ Sale',new:'✨ New',limited:'⏳ Limited'}[p.badge]; bd.style.background={bestseller:'#e67e22',sale:'#c0392b',new:'#7b2d8b',limited:'#27ae60'}[p.badge]; }
+    if (p.badge) { bd.style.display='block'; bd.textContent={bestseller:'🔥 Bestseller',sale:'🏷️ Sale',new:'✨ New',limited:'⏳ Limited'}[p.badge]; bd.style.background={bestseller:'#B8860B',sale:'#B8860B',new:'#6B1428',limited:'#27ae60'}[p.badge]; }
     else bd.style.display='none';
 
     // Colors
     document.getElementById('pdpColorLabel').textContent = p.colorNames[0];
     document.getElementById('pdpColors').innerHTML = p.colors.map((c,i) => `
-      <div onclick="selectPDPColor(${i})" id="pdpC${i}" style="width:28px;height:28px;border-radius:50%;background:${c};cursor:pointer;border:${i===0?'3px solid #7b2d8b':'2px solid #ddd'};transition:transform .15s;" title="${p.colorNames[i]}"></div>`).join('');
+      <div onclick="selectPDPColor(${i})" id="pdpC${i}" style="width:28px;height:28px;border-radius:50%;background:${c};cursor:pointer;border:${i===0?'3px solid #6B1428':'2px solid #ddd'};transition:transform .15s;" title="${p.colorNames[i]}"></div>`).join('');
 
     document.getElementById('pdpQty').textContent = '1';
-    document.getElementById('pdpWish').textContent = '🤍';
+    document.getElementById('pdpWish').textContent = isWished(p.id) ? '❤️' : '🤍';
     document.getElementById('pdpDesc').textContent = p.description;
     document.getElementById('pdpHighlights').innerHTML = (p.highlights||[]).map(h => `<span class="highlight-chip">${h}</span>`).join('');
 
+    // Sold-out handling
+    const soldOutImg = document.getElementById('pdpSoldOut');
+    const normalCta = document.getElementById('pdpCta');
+    const soldOutCta = document.getElementById('pdpSoldOutCta');
+    if (p.soldOut) {
+      soldOutImg.style.display = 'block';
+      normalCta.style.display = 'none';
+      soldOutCta.style.display = 'block';
+      document.getElementById('pdpImg').style.filter = 'grayscale(0.6) opacity(0.7)';
+    } else {
+      soldOutImg.style.display = 'none';
+      normalCta.style.display = 'flex';
+      soldOutCta.style.display = 'none';
+      document.getElementById('pdpImg').style.filter = 'none';
+    }
+
+    // Reviews
+    renderReviews(p);
+    renderStarPicker();
+
+    // Related products + FAQ
+    renderRelated(p);
+    renderFaq(p);
+
+    document.getElementById('pdpOverlay').scrollTop = 0;
     document.getElementById('pdpOverlay').style.display = 'block';
     document.body.style.overflow = 'hidden';
+  }
+
+  // ===== RELATED PRODUCTS =====
+  function renderRelated(p) {
+    // Same category first, then same fabric, exclude current — show up to 4
+    let related = PRODUCTS.filter(x => x.id !== p.id && x.category === p.category);
+    if (related.length < 4) {
+      const more = PRODUCTS.filter(x => x.id !== p.id && x.fabric === p.fabric && !related.includes(x));
+      related = related.concat(more);
+    }
+    if (related.length < 4) {
+      const fill = PRODUCTS.filter(x => x.id !== p.id && !related.includes(x));
+      related = related.concat(fill);
+    }
+    related = related.slice(0, 4);
+
+    document.getElementById('pdpRelated').innerHTML = related.map(r => {
+      const save = r.oldPrice ? (r.oldPrice - r.price) : 0;
+      return `
+      <div onclick="openPDP(${r.id})" style="cursor:pointer;border:1px solid #EADFC2;border-radius:10px;overflow:hidden;background:#fff;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 18px rgba(107,20,40,0.15)'" onmouseout="this.style.boxShadow='none'">
+        <div style="position:relative;aspect-ratio:3/4;background:#FBF6E9;">
+          <img src="${r.image}" alt="${r.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;${r.soldOut?'filter:grayscale(0.6) opacity(0.7);':''}" />
+          ${r.soldOut?'<span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-8deg);background:rgba(26,26,26,0.82);color:#fff;font-size:.7rem;font-weight:800;padding:4px 10px;border-radius:4px;text-transform:uppercase;">Sold Out</span>':''}
+        </div>
+        <div style="padding:10px;">
+          <div style="font-size:.78rem;font-weight:700;color:#222;line-height:1.3;height:2.6em;overflow:hidden;">${r.name}</div>
+          <div style="margin-top:5px;"><span style="font-weight:800;color:#6B1428;font-size:.9rem;">${fmt(r.price)}</span>${r.oldPrice?` <span style="font-size:.75rem;color:#aaa;text-decoration:line-through;">${fmt(r.oldPrice)}</span>`:''}</div>
+          ${save>0?`<div style="font-size:.7rem;color:#B8860B;font-weight:800;margin-top:3px;">Save ${fmt(save)}</div>`:''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // ===== FAQ =====
+  const FAQ_ITEMS = [
+    { q: 'What is the saree length and does it include a blouse?', a: 'Each saree is 6.3 metres long and includes a 0.8-metre unstitched blouse piece, unless mentioned otherwise in the description.' },
+    { q: 'Do you offer Cash on Delivery (COD)?', a: 'Yes! We offer COD across India. You can also pay via UPI (GPay/PhonePe/Paytm) or bank transfer — just let us know your preference when you place the order on WhatsApp.' },
+    { q: 'How long does delivery take?', a: 'Orders are dispatched within 1–2 business days and typically delivered in 5–7 business days across India. You will receive tracking details once shipped.' },
+    { q: 'What is your return / exchange policy?', a: 'We offer easy 7-day returns and exchanges on unused products with original packaging. Contact us on WhatsApp to initiate a return.' },
+    { q: 'Do you provide custom blouse stitching?', a: 'Yes, we offer custom blouse stitching as an add-on service. Mention it in your WhatsApp order and we will share measurement details.' },
+    { q: 'Will the colour exactly match the photo?', a: 'We try our best to show accurate colours, but slight variation may occur due to screen settings and lighting. The actual product may look marginally different.' },
+  ];
+
+  function renderFaq(p) {
+    document.getElementById('pdpFaq').innerHTML = FAQ_ITEMS.map((f, i) => `
+      <div style="border-bottom:1px solid #E8DCC0;">
+        <button onclick="toggleFaq(${i})" style="width:100%;text-align:left;background:none;border:none;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.88rem;font-weight:700;color:#333;">
+          <span>${f.q}</span>
+          <span id="faqIcon${i}" style="color:#6B1428;font-size:1.2rem;flex-shrink:0;transition:transform .2s;">+</span>
+        </button>
+        <div id="faqBody${i}" style="max-height:0;overflow:hidden;transition:max-height .25s ease;">
+          <div style="font-size:.84rem;color:#666;line-height:1.6;padding:0 0 14px;">${f.a}</div>
+        </div>
+      </div>`).join('');
+  }
+
+  function toggleFaq(i) {
+    const body = document.getElementById('faqBody' + i);
+    const icon = document.getElementById('faqIcon' + i);
+    const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+    if (isOpen) {
+      body.style.maxHeight = '0px';
+      icon.textContent = '+';
+      icon.style.transform = 'none';
+    } else {
+      body.style.maxHeight = body.scrollHeight + 'px';
+      icon.textContent = '−';
+    }
+  }
+
+  // ===== REVIEWS =====
+  // Stored per-product in localStorage; seeded with sample reviews
+  let pdpSelectedStars = 5;
+  let pdpReviewPhotos = [];     // base64 photos for the review being written
+  let pdpReviewPage = 1;        // current review page
+  const REVIEWS_PER_PAGE = 10;
+
+  const SAMPLE_REVIEWS = {
+    default: [
+      { name: 'Priya S.', rating: 5, text: 'Absolutely gorgeous saree! The fabric quality is excellent and the colour is exactly as shown. Got so many compliments.', photos: [] },
+      { name: 'Lakshmi R.', rating: 4, text: 'Beautiful drape and the zari border is elegant. Delivery was quick. Blouse piece included as promised.', photos: [] },
+    ],
+  };
+
+  function getReviews(productId) {
+    const stored = JSON.parse(localStorage.getItem('gs_reviews_' + productId) || 'null');
+    if (stored) return stored;
+    return JSON.parse(JSON.stringify(SAMPLE_REVIEWS.default));
+  }
+
+  function renderReviews(p) {
+    const reviews = getReviews(p.id);
+    const avg = reviews.length ? (reviews.reduce((s,r)=>s+r.rating,0)/reviews.length).toFixed(1) : p.rating;
+    document.getElementById('pdpReviewSummary').innerHTML =
+      `<strong style="color:#f4a81d;">${'★'.repeat(Math.round(avg))}</strong> ${avg} out of 5 · ${reviews.length} review${reviews.length!==1?'s':''}`;
+
+    // Pagination slice
+    const totalPages = Math.ceil(reviews.length / REVIEWS_PER_PAGE) || 1;
+    if (pdpReviewPage > totalPages) pdpReviewPage = totalPages;
+    const start = (pdpReviewPage - 1) * REVIEWS_PER_PAGE;
+    const pageReviews = reviews.slice(start, start + REVIEWS_PER_PAGE);
+
+    document.getElementById('pdpReviews').innerHTML = pageReviews.map(r => {
+      const photosHtml = (r.photos && r.photos.length)
+        ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">${r.photos.map(src =>
+            `<img src="${src}" onclick="window.open('${src}','_blank')" style="width:60px;height:60px;object-fit:cover;border-radius:6px;border:1px solid #E8DCC0;cursor:pointer;" alt="Customer photo" />`
+          ).join('')}</div>`
+        : '';
+      return `
+      <div style="background:#fff;border:1px solid #EADFC2;border-radius:10px;padding:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <span style="font-weight:700;font-size:.88rem;color:#333;">${r.name} <span style="color:#27ae60;font-size:.7rem;font-weight:600;">✔ Verified</span></span>
+          <span style="color:#f4a81d;font-size:.85rem;">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</span>
+        </div>
+        <div style="font-size:.84rem;color:#666;line-height:1.5;">${r.text}</div>
+        ${photosHtml}
+      </div>`;
+    }).join('');
+
+    // Pagination controls
+    const pag = document.getElementById('pdpReviewPagination');
+    if (totalPages > 1) {
+      let html = '';
+      html += `<button onclick="gotoReviewPage(${pdpReviewPage-1})" ${pdpReviewPage===1?'disabled':''} style="border:1.5px solid #E8DCC0;background:#fff;border-radius:6px;padding:5px 10px;cursor:${pdpReviewPage===1?'not-allowed':'pointer'};color:#6B1428;font-weight:700;opacity:${pdpReviewPage===1?'.4':'1'};">‹</button>`;
+      for (let i=1;i<=totalPages;i++) {
+        html += `<button onclick="gotoReviewPage(${i})" style="border:1.5px solid ${i===pdpReviewPage?'#6B1428':'#E8DCC0'};background:${i===pdpReviewPage?'#6B1428':'#fff'};color:${i===pdpReviewPage?'#fff':'#6B1428'};border-radius:6px;padding:5px 11px;cursor:pointer;font-weight:700;">${i}</button>`;
+      }
+      html += `<button onclick="gotoReviewPage(${pdpReviewPage+1})" ${pdpReviewPage===totalPages?'disabled':''} style="border:1.5px solid #E8DCC0;background:#fff;border-radius:6px;padding:5px 10px;cursor:${pdpReviewPage===totalPages?'not-allowed':'pointer'};color:#6B1428;font-weight:700;opacity:${pdpReviewPage===totalPages?'.4':'1'};">›</button>`;
+      pag.innerHTML = html;
+    } else {
+      pag.innerHTML = '';
+    }
+  }
+
+  function gotoReviewPage(n) {
+    pdpReviewPage = n;
+    renderReviews(pdpProduct);
+    document.getElementById('pdpReviews').scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+
+  function renderStarPicker() {
+    pdpSelectedStars = 5;
+    pdpReviewPhotos = [];
+    pdpReviewPage = 1;
+    document.getElementById('pdpReviewPhotoPreview').innerHTML = '';
+    const picker = document.getElementById('pdpStarPicker');
+    picker.innerHTML = [1,2,3,4,5].map(n =>
+      `<span onclick="setStars(${n})" id="star${n}" style="font-size:1.5rem;cursor:pointer;color:#f4a81d;">★</span>`
+    ).join('');
+  }
+
+  function setStars(n) {
+    pdpSelectedStars = n;
+    [1,2,3,4,5].forEach(i => {
+      document.getElementById('star'+i).style.color = i <= n ? '#f4a81d' : '#ddd';
+    });
+  }
+
+  function previewReviewPhotos(input) {
+    const files = Array.from(input.files).slice(0, 4); // max 4 photos
+    pdpReviewPhotos = [];
+    const preview = document.getElementById('pdpReviewPhotoPreview');
+    preview.innerHTML = '';
+    files.forEach(file => {
+      if (file.size > 3 * 1024 * 1024) { showToast('⚠️ Each photo must be under 3MB'); return; }
+      const reader = new FileReader();
+      reader.onload = e => {
+        pdpReviewPhotos.push(e.target.result);
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.cssText = 'width:56px;height:56px;object-fit:cover;border-radius:6px;border:1px solid #E8DCC0;';
+        preview.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function submitReview() {
+    const name = document.getElementById('pdpReviewName').value.trim();
+    const text = document.getElementById('pdpReviewText').value.trim();
+    if (!name || !text) { showToast('⚠️ Please add your name and review'); return; }
+    const reviews = getReviews(pdpProduct.id);
+    reviews.unshift({ name, rating: pdpSelectedStars, text, photos: [...pdpReviewPhotos] });
+    localStorage.setItem('gs_reviews_' + pdpProduct.id, JSON.stringify(reviews));
+    document.getElementById('pdpReviewName').value = '';
+    document.getElementById('pdpReviewText').value = '';
+    document.getElementById('pdpReviewPhotoPreview').innerHTML = '';
+    pdpReviewPhotos = [];
+    pdpReviewPage = 1;
+    renderReviews(pdpProduct);
+    showToast('✅ Thank you for your review!');
   }
 
   function closePDP() { document.getElementById('pdpOverlay').style.display='none'; document.body.style.overflow=''; }
@@ -1775,7 +2219,7 @@
     pdpColorIdx = i;
     pdpProduct.colors.forEach((_,j) => {
       const el = document.getElementById(`pdpC${j}`);
-      if(el) el.style.border = j===i ? '3px solid #7b2d8b' : '2px solid #ddd';
+      if(el) el.style.border = j===i ? '3px solid #6B1428' : '2px solid #ddd';
     });
     document.getElementById('pdpColorLabel').textContent = pdpProduct.colorNames[i];
   }
@@ -1786,21 +2230,31 @@
   }
 
   function pdpAddToCart() {
+    if (pdpProduct.soldOut) { showToast('😔 This saree is sold out'); return; }
     addToCartItem({ id: pdpProduct.id, name: pdpProduct.name, price: pdpProduct.price, image: pdpProduct.image, color: pdpProduct.colorNames[pdpColorIdx], colorHex: pdpProduct.colors[pdpColorIdx], qty: pdpQty });
     closePDP();
     openCart();
   }
 
   function pdpBuyNow() {
+    if (pdpProduct.soldOut) { showToast('😔 This saree is sold out'); return; }
     addToCartItem({ id: pdpProduct.id, name: pdpProduct.name, price: pdpProduct.price, image: pdpProduct.image, color: pdpProduct.colorNames[pdpColorIdx], colorHex: pdpProduct.colors[pdpColorIdx], qty: pdpQty });
     closePDP();
     openCheckout();
   }
 
   function togglePDPWish() {
-    pdpWishlisted = !pdpWishlisted;
-    document.getElementById('pdpWish').textContent = pdpWishlisted ? '❤️' : '🤍';
-    showToast(pdpWishlisted ? '❤️ Added to wishlist!' : '🤍 Removed from wishlist');
+    const id = pdpProduct.id;
+    if (wishlist.includes(id)) {
+      wishlist = wishlist.filter(x => x !== id);
+      document.getElementById('pdpWish').textContent = '🤍';
+      showToast('🤍 Removed from wishlist');
+    } else {
+      wishlist.push(id);
+      document.getElementById('pdpWish').textContent = '❤️';
+      showToast('❤️ Added to wishlist!');
+    }
+    saveWishlist(); updateWishCount(); applyFilters();
   }
 
   // ===== CHECKOUT =====
@@ -1826,7 +2280,7 @@
       <div style="display:flex;gap:10px;align-items:center;">
         <img src="${item.image}" style="width:44px;height:56px;object-fit:cover;border-radius:6px;" />
         <div style="flex:1;font-size:.8rem;"><div style="font-weight:600;color:#333;line-height:1.3;">${item.name}</div><div style="color:#888;margin-top:2px;">${item.color} · Qty ${item.qty}</div></div>
-        <div style="font-weight:800;color:#7b2d8b;font-size:.85rem;">${fmt(item.price*item.qty)}</div>
+        <div style="font-weight:800;color:#6B1428;font-size:.85rem;">${fmt(item.price*item.qty)}</div>
       </div>`).join('');
 
     document.getElementById('coSideSubtotal').textContent = fmt(sub);
@@ -1845,7 +2299,7 @@
       <div class="co-item">
         <img src="${item.image}" alt="${item.name}" />
         <div style="flex:1;"><div style="font-size:.85rem;font-weight:700;color:#222;">${item.name}</div><div style="font-size:.76rem;color:#888;margin-top:2px;">${item.color} · Qty: ${item.qty}</div></div>
-        <div style="font-weight:800;color:#7b2d8b;">${fmt(item.price*item.qty)}</div>
+        <div style="font-weight:800;color:#6B1428;">${fmt(item.price*item.qty)}</div>
       </div>`).join('');
 
     // Payment total block
@@ -1853,15 +2307,15 @@
       <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>Subtotal</span><span>${fmt(sub)}</span></div>
       ${couponDiscount>0?`<div style="display:flex;justify-content:space-between;color:#27ae60;margin-bottom:4px;"><span>Coupon (${appliedCoupon})</span><span>-${fmt(couponDiscount)}</span></div>`:''}
       <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Shipping</span><span>${ship===0?'FREE 🎉':fmt(ship)}</span></div>
-      <div style="display:flex;justify-content:space-between;font-size:1rem;font-weight:800;border-top:1.5px solid #7b2d8b;padding-top:8px;"><span>Total</span><span style="color:#7b2d8b;">${fmt(total)}</span></div>`;
+      <div style="display:flex;justify-content:space-between;font-size:1rem;font-weight:800;border-top:1.5px solid #6B1428;padding-top:8px;"><span>Total</span><span style="color:#6B1428;">${fmt(total)}</span></div>`;
   }
 
   function showCoStep(n) {
     [1,2,3].forEach(i => {
       document.getElementById(`coStep${i}`).style.display = i===n ? 'block' : 'none';
       const ind = document.getElementById(`step${i}ind`);
-      ind.style.color = i<=n ? '#7b2d8b' : '#aaa';
-      ind.querySelector('span').style.background = i<=n ? '#7b2d8b' : '#ddd';
+      ind.style.color = i<=n ? '#6B1428' : '#aaa';
+      ind.querySelector('span').style.background = i<=n ? '#6B1428' : '#ddd';
     });
   }
 
@@ -1889,8 +2343,8 @@
     const msg = document.getElementById('couponMsg');
     const c = COUPONS[code];
     const sub = cartSubtotal();
-    if (!c) { msg.style.color='#c0392b'; msg.textContent='❌ Invalid coupon code'; couponDiscount=0; appliedCoupon=''; }
-    else if (sub < c.min) { msg.style.color='#e67e22'; msg.textContent=`⚠️ Min order ${fmt(c.min)} required`; couponDiscount=0; appliedCoupon=''; }
+    if (!c) { msg.style.color='#B8860B'; msg.textContent='❌ Invalid coupon code'; couponDiscount=0; appliedCoupon=''; }
+    else if (sub < c.min) { msg.style.color='#B8860B'; msg.textContent=`⚠️ Min order ${fmt(c.min)} required`; couponDiscount=0; appliedCoupon=''; }
     else {
       couponDiscount = c.type==='percent' ? Math.round(sub*c.value/100) : c.value;
       appliedCoupon = code;
@@ -1903,7 +2357,7 @@
     currentPayMethod = method;
     ['upi','cod','bank'].forEach(m => {
       const el = document.getElementById('pay'+m.charAt(0).toUpperCase()+m.slice(1));
-      if(el) el.style.borderColor = m===method ? '#7b2d8b' : '#ddd';
+      if(el) el.style.borderColor = m===method ? '#6B1428' : '#ddd';
     });
   }
 
@@ -1999,19 +2453,138 @@
     document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     currentCategory = cat;
-    const filtered = cat === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === cat);
-    renderProducts(filtered);
-    document.getElementById('productsCount').innerHTML = `Showing <strong>1–${filtered.length}</strong> of <strong>${filtered.length}</strong> products`;
+    applyFilters();
+  }
+
+  let currentPriceRange = 'all';
+  let currentSort = '';
+
+  function filterPrice(btn, range) {
+    document.querySelectorAll('.price-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentPriceRange = range;
+    applyFilters();
+  }
+
+  function inPriceRange(price, range) {
+    switch (range) {
+      case 'below499':   return price < 500;
+      case '500-999':    return price >= 500  && price <= 999;
+      case '1000-1999':  return price >= 1000 && price <= 1999;
+      case '2000-4999':  return price >= 2000 && price <= 4999;
+      case '5000plus':   return price >= 5000;
+      default:           return true;
+    }
+  }
+
+  // Combined filter: search + category + price + availability + sort
+  let currentSearch = '';
+
+  function runSearch() {
+    currentSearch = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+    document.getElementById('searchClearBtn').style.display = currentSearch ? 'block' : 'none';
+    applyFilters();
+    document.querySelector('.shop-layout').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function clearSearch() {
+    currentSearch = '';
+    document.getElementById('searchInput').value = '';
+    document.getElementById('searchClearBtn').style.display = 'none';
+    applyFilters();
+  }
+
+  function focusSearch() {
+    const input = document.getElementById('searchInput');
+    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => input.focus(), 300);
+  }
+
+  function matchesSearch(p, q) {
+    if (!q) return true;
+    const haystack = [
+      p.name, p.category, p.fabric,
+      ...(p.colorNames || []),
+      ...(p.highlights || []),
+      p.description || ''
+    ].join(' ').toLowerCase();
+    return haystack.includes(q);
+  }
+
+  // ===== SIDEBAR FILTER STATE =====
+  let selectedFabrics = new Set();
+  let selectedColours = new Set();
+  let maxPrice = 35000;
+
+  // Build fabric checkboxes + colour swatches from real product data
+  function buildSidebarFilters() {
+    // Fabrics with real counts
+    const fabricCounts = {};
+    PRODUCTS.forEach(p => { fabricCounts[p.fabric] = (fabricCounts[p.fabric]||0)+1; });
+    const fabrics = Object.keys(fabricCounts).sort();
+    document.getElementById('fabricFilters').innerHTML = fabrics.map(f => `
+      <label class="filter-option">
+        <input type="checkbox" value="${f}" onchange="toggleFabric('${f.replace(/'/g,"\\'")}',this.checked)" />
+        ${f} (${fabricCounts[f]})
+      </label>`).join('');
+
+    // Colours with swatch hexes (use first hex seen for each colour name)
+    const colourMap = {};
+    PRODUCTS.forEach(p => (p.colorNames||[]).forEach((cn,i) => {
+      if (!colourMap[cn]) colourMap[cn] = (p.colors && p.colors[i]) || '#999';
+    }));
+    const colours = Object.keys(colourMap).sort();
+    document.getElementById('colorFilters').innerHTML = colours.map(cn => `
+      <div class="swatch" style="background:${colourMap[cn]}" title="${cn}"
+           onclick="toggleColour('${cn.replace(/'/g,"\\'")}',this)"></div>`).join('');
+  }
+
+  function toggleFabric(f, checked) {
+    if (checked) selectedFabrics.add(f); else selectedFabrics.delete(f);
+    applyFilters();
+  }
+  function toggleColour(cn, el) {
+    if (selectedColours.has(cn)) { selectedColours.delete(cn); el.classList.remove('active'); }
+    else { selectedColours.add(cn); el.classList.add('active'); }
+    applyFilters();
+  }
+  function onPriceSlider(val) {
+    maxPrice = parseInt(val);
+    const label = document.getElementById('priceVal');
+    label.textContent = maxPrice >= 35000 ? 'Up to ₹35,000' : 'Up to ₹' + maxPrice.toLocaleString('en-IN');
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const inStockOnlyEl = document.getElementById('inStockOnly');
+    const inStockOnly = inStockOnlyEl ? inStockOnlyEl.checked : false;
+    let list = PRODUCTS.filter(p =>
+      matchesSearch(p, currentSearch) &&
+      (currentCategory === 'All' || p.category === currentCategory) &&
+      inPriceRange(p.price, currentPriceRange) &&
+      (selectedFabrics.size === 0 || selectedFabrics.has(p.fabric)) &&
+      (selectedColours.size === 0 || (p.colorNames||[]).some(cn => selectedColours.has(cn))) &&
+      (p.price <= maxPrice) &&
+      (!inStockOnly || !p.soldOut)
+    );
+    if (currentSort === 'price_low')  list.sort((a,b)=>a.price-b.price);
+    else if (currentSort === 'price_high') list.sort((a,b)=>b.price-a.price);
+    else if (currentSort === 'rating')     list.sort((a,b)=>b.rating-a.rating);
+    else if (currentSort === 'popular')    list.sort((a,b)=>b.reviews-a.reviews);
+    else if (currentSort === 'newest')     list.sort((a,b)=>b.id-a.id);
+
+    renderProducts(list);
+    const countEl = document.getElementById('productsCount');
+    if (currentSearch) {
+      countEl.innerHTML = `Found <strong>${list.length}</strong> result${list.length!==1?'s':''} for "<strong>${currentSearch}</strong>"`;
+    } else {
+      countEl.innerHTML = `Showing <strong>${list.length}</strong> of <strong>${PRODUCTS.length}</strong> products`;
+    }
   }
 
   function sortProducts(val) {
-    let src = currentCategory==='All' ? [...PRODUCTS] : PRODUCTS.filter(p=>p.category===currentCategory);
-    if (val==='price_low') src.sort((a,b)=>a.price-b.price);
-    else if (val==='price_high') src.sort((a,b)=>b.price-a.price);
-    else if (val==='rating') src.sort((a,b)=>b.rating-a.rating);
-    else if (val==='popular') src.sort((a,b)=>b.reviews-a.reviews);
-    else if (val==='newest') src.sort((a,b)=>b.id-a.id);
-    renderProducts(src);
+    currentSort = val;
+    applyFilters();
   }
 
   function setView(btn, view) {
@@ -2021,16 +2594,334 @@
   }
 
   function clearFilters() {
-    document.querySelectorAll('.filter-card input[type="checkbox"]').forEach(cb=>cb.checked=false);
-    filterCategory(document.querySelector('.cat-pill'),'All');
+    // Reset sidebar filters
+    selectedFabrics.clear();
+    selectedColours.clear();
+    maxPrice = 35000;
+    document.querySelectorAll('#fabricFilters input[type="checkbox"]').forEach(cb=>cb.checked=false);
+    document.querySelectorAll('#colorFilters .swatch').forEach(s=>s.classList.remove('active'));
+    const slider = document.getElementById('priceRange');
+    if (slider) { slider.value = 35000; document.getElementById('priceVal').textContent = 'Up to ₹35,000'; }
+    const inStock = document.getElementById('inStockOnly');
+    if (inStock) inStock.checked = false;
+    // Reset top filters
+    currentCategory = 'All'; currentPriceRange = 'all'; currentSort = ''; currentSearch = '';
+    const si = document.getElementById('searchInput'); if (si) si.value = '';
+    const scb = document.getElementById('searchClearBtn'); if (scb) scb.style.display = 'none';
+    document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
+    document.querySelector('.cat-pill').classList.add('active');
+    document.querySelectorAll('.price-pill').forEach(b => b.classList.remove('active'));
+    document.querySelector('.price-pill').classList.add('active');
+    applyFilters();
     showToast('🧹 Filters cleared!');
   }
 
   document.querySelectorAll('.swatch').forEach(s=>s.addEventListener('click',function(){this.classList.toggle('active');}));
 
+  // ===== FLOATING WHATSAPP CHAT =====
+  function openWhatsAppChat() {
+    const msg = encodeURIComponent('Hi Geetham Sarees! 👋 I have a question about your sarees.');
+    const num = GS_WHATSAPP_NUMBER.replace(/\D/g, '');
+    window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
+  }
+
+  // ===== SAREE STYLE FINDER QUIZ =====
+  const quizAnswers = { occasion: null, budget: null, colour: null };
+  let quizStep = 1;
+
+  const QUIZ = {
+    1: {
+      key: 'occasion',
+      q: 'What\'s the occasion?',
+      options: [
+        { label: '💍 Wedding', value: 'Wedding', icon: '💍' },
+        { label: '🎉 Festive', value: 'Festive', icon: '🎉' },
+        { label: '🌙 Party', value: 'Party Wear', icon: '🌙' },
+        { label: '💼 Office', value: 'Office Wear', icon: '💼' },
+        { label: '☀️ Casual / Daily', value: 'Casual', icon: '☀️' },
+        { label: '✨ Just Browsing', value: 'any', icon: '✨' },
+      ],
+    },
+    2: {
+      key: 'budget',
+      q: 'What\'s your budget?',
+      options: [
+        { label: 'Below ₹999', value: 'b1' },
+        { label: '₹1000 – ₹2999', value: 'b2' },
+        { label: '₹3000 – ₹6999', value: 'b3' },
+        { label: '₹7000 & Above', value: 'b4' },
+        { label: 'No budget limit', value: 'any' },
+      ],
+    },
+    3: {
+      key: 'colour',
+      q: 'Pick a colour family',
+      options: [
+        { label: 'Reds & Maroons', value: 'red' },
+        { label: 'Blues & Greens', value: 'cool' },
+        { label: 'Pinks & Purples', value: 'pink' },
+        { label: 'Gold, Cream & Neutrals', value: 'neutral' },
+        { label: 'Surprise me!', value: 'any' },
+      ],
+    },
+  };
+
+  function openQuiz() {
+    quizStep = 1;
+    quizAnswers.occasion = quizAnswers.budget = quizAnswers.colour = null;
+    renderQuizStep();
+    document.getElementById('quizOverlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeQuiz() {
+    document.getElementById('quizOverlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function renderQuizStep() {
+    [1,2,3].forEach(n => {
+      document.getElementById('qdot'+n).style.background = n <= quizStep ? '#fff' : 'rgba(255,255,255,0.3)';
+    });
+    const step = QUIZ[quizStep];
+    document.getElementById('quizBody').innerHTML = `
+      <div style="font-size:1.05rem;font-weight:800;color:#6B1428;margin-bottom:18px;">${quizStep}. ${step.q}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        ${step.options.map(o => `
+          <button onclick="answerQuiz('${o.value}')" style="background:#FBF4E4;border:1.5px solid #E8DCC0;border-radius:10px;padding:14px;font-size:.88rem;font-weight:700;color:#4A0E1A;cursor:pointer;transition:all .15s;text-align:left;"
+            onmouseover="this.style.borderColor='#B8860B';this.style.background='#F3E9D2';"
+            onmouseout="this.style.borderColor='#E8DCC0';this.style.background='#FBF4E4';">
+            ${o.label}
+          </button>`).join('')}
+      </div>
+      ${quizStep > 1 ? `<button onclick="quizBack()" style="margin-top:16px;background:none;border:none;color:#999;cursor:pointer;font-size:.83rem;">← Back</button>` : ''}
+    `;
+  }
+
+  function answerQuiz(value) {
+    quizAnswers[QUIZ[quizStep].key] = value;
+    if (quizStep < 3) { quizStep++; renderQuizStep(); }
+    else showQuizResults();
+  }
+  function quizBack() { if (quizStep > 1) { quizStep--; renderQuizStep(); } }
+
+  function colourMatch(product, family) {
+    if (family === 'any') return true;
+    const names = (product.colorNames || []).join(' ').toLowerCase();
+    const map = {
+      red:     ['red','maroon','crimson','ruby','brick','burgundy','wine','rani'],
+      cool:    ['blue','green','navy','indigo','teal','emerald','jade','mint','sea'],
+      pink:    ['pink','purple','violet','magenta','fuchsia','plum','lavender','grape'],
+      neutral: ['gold','cream','ivory','white','beige','caramel','champagne','mustard','tan','brown','black'],
+    };
+    return (map[family] || []).some(w => names.includes(w));
+  }
+  function budgetMatch(price, b) {
+    switch (b) {
+      case 'b1': return price < 1000;
+      case 'b2': return price >= 1000 && price <= 2999;
+      case 'b3': return price >= 3000 && price <= 6999;
+      case 'b4': return price >= 7000;
+      default: return true;
+    }
+  }
+
+  function showQuizResults() {
+    [1,2,3].forEach(n => document.getElementById('qdot'+n).style.background = '#fff');
+    // Score each in-stock product
+    let matches = PRODUCTS.filter(p => !p.soldOut).map(p => {
+      let score = 0;
+      if (quizAnswers.occasion === 'any' || p.occasion === quizAnswers.occasion ||
+          (p.highlights||[]).some(h=>h.toLowerCase().includes((quizAnswers.occasion||'').toLowerCase()))) score += 2;
+      if (budgetMatch(p.price, quizAnswers.budget)) score += 2;
+      if (colourMatch(p, quizAnswers.colour)) score += 1;
+      return { p, score };
+    });
+    matches.sort((a,b) => b.score - a.score);
+    const top = matches.slice(0, 4).map(m => m.p);
+
+    document.getElementById('quizBody').innerHTML = `
+      <div style="text-align:center;margin-bottom:18px;">
+        <div style="font-size:2.5rem;">🎉</div>
+        <div style="font-size:1.1rem;font-weight:800;color:#6B1428;margin-top:6px;">Your Perfect Matches!</div>
+        <div style="font-size:.83rem;color:#888;margin-top:2px;">Handpicked based on your style</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        ${top.map(r => `
+          <div onclick="closeQuiz();openPDP(${r.id})" style="cursor:pointer;border:1px solid #EADFC2;border-radius:10px;overflow:hidden;background:#fff;">
+            <div style="aspect-ratio:3/4;background:#FBF6E9;"><img src="${r.image}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;" /></div>
+            <div style="padding:9px;">
+              <div style="font-size:.76rem;font-weight:700;color:#222;line-height:1.3;height:2.6em;overflow:hidden;">${r.name}</div>
+              <div style="font-weight:800;color:#6B1428;font-size:.88rem;margin-top:4px;">${fmt(r.price)}</div>
+            </div>
+          </div>`).join('')}
+      </div>
+      <button onclick="applyQuizToShop()" style="width:100%;background:#6B1428;color:#fff;border:none;border-radius:10px;padding:13px;font-weight:800;cursor:pointer;margin-top:18px;">View All Matching Sarees →</button>
+      <button onclick="openQuiz()" style="width:100%;background:none;border:none;color:#999;cursor:pointer;font-size:.83rem;margin-top:8px;">↻ Retake Quiz</button>
+    `;
+  }
+
+  function applyQuizToShop() {
+    // Apply the occasion as a search term to the main shop
+    closeQuiz();
+    const term = quizAnswers.occasion && quizAnswers.occasion !== 'any' ? quizAnswers.occasion : '';
+    document.getElementById('searchInput').value = term;
+    currentSearch = term.toLowerCase();
+    document.getElementById('searchClearBtn').style.display = term ? 'block' : 'none';
+    applyFilters();
+    document.querySelector('.shop-layout').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // ===== LEGAL / INFO PAGES =====
+  const WA_DISPLAY = '+91 98412 33922';
+  const LEGAL = {
+    contact: {
+      title: '📞 Contact Us',
+      html: `
+        <p>We'd love to hear from you! Reach out for orders, queries, or custom requirements.</p>
+        <ul style="margin:12px 0 0 18px;">
+          <li><strong>WhatsApp / Call:</strong> ${WA_DISPLAY}</li>
+          <li><strong>Email:</strong> orders@geethamsarees.in</li>
+          <li><strong>Hours:</strong> Mon–Sat, 10:00 AM – 7:00 PM IST</li>
+        </ul>
+        <p style="margin-top:14px;">For the fastest response, message us on WhatsApp — we typically reply within a few hours.</p>
+        <a href="https://wa.me/919841233922" target="_blank" style="display:inline-block;margin-top:14px;background:#25D366;color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:700;">💬 Chat on WhatsApp</a>`
+    },
+    shipping: {
+      title: '🚚 Shipping Policy',
+      html: `
+        <p><strong>Delivery across India.</strong></p>
+        <ul style="margin:12px 0 0 18px;">
+          <li><strong>Free shipping</strong> on all orders above ₹999. Below that, a flat ₹99 applies.</li>
+          <li>Orders are <strong>dispatched within 1–2 business days</strong> of confirmation.</li>
+          <li>Standard delivery takes <strong>5–7 business days</strong> depending on your location.</li>
+          <li>You'll receive a <strong>tracking link</strong> on WhatsApp once your order ships.</li>
+          <li>We currently ship within India only. For international orders, message us on WhatsApp.</li>
+        </ul>
+        <p style="margin-top:12px;">Delays may occasionally occur due to courier or weather conditions, festivals, or remote pin codes.</p>`
+    },
+    returns: {
+      title: '↩️ Returns & Exchanges',
+      html: `
+        <p>We want you to love your saree. If something isn't right, we're here to help.</p>
+        <ul style="margin:12px 0 0 18px;">
+          <li><strong>7-day return/exchange</strong> window from the date of delivery.</li>
+          <li>Items must be <strong>unused, unwashed</strong>, with original tags and packaging.</li>
+          <li>Custom-stitched blouses and altered items are <strong>not returnable</strong>.</li>
+          <li>To initiate a return, message us on WhatsApp with your order number and photos.</li>
+          <li>Refunds are processed within <strong>5–7 business days</strong> after we receive the item, to your original payment method or UPI.</li>
+        </ul>
+        <p style="margin-top:12px;">Return shipping for a change-of-mind is borne by the customer; for a defective or wrong item, we cover it fully.</p>`
+    },
+    privacy: {
+      title: '🔒 Privacy Policy',
+      html: `
+        <p>Your privacy matters to us. This policy explains how we handle your information.</p>
+        <p style="margin-top:10px;"><strong>What we collect:</strong> When you place an order, we collect your name, phone number, email, and delivery address — only what's needed to fulfil your order.</p>
+        <p style="margin-top:10px;"><strong>How we use it:</strong> Solely to process, pack, ship, and provide support for your order. We never sell or rent your data.</p>
+        <p style="margin-top:10px;"><strong>Sharing:</strong> We share your address only with our courier partners for delivery. Payment details are handled by secure payment providers — we do not store card or UPI credentials.</p>
+        <p style="margin-top:10px;"><strong>Your data stays on this device:</strong> Your cart, wishlist, and reviews are stored locally in your browser.</p>
+        <p style="margin-top:10px;"><strong>Contact:</strong> For any privacy request, email orders@geethamsarees.in.</p>`
+    },
+    terms: {
+      title: '📜 Terms & Conditions',
+      html: `
+        <p>By using this website and placing an order, you agree to the following terms:</p>
+        <ul style="margin:12px 0 0 18px;">
+          <li>All prices are in Indian Rupees (₹) and inclusive of applicable taxes unless stated otherwise.</li>
+          <li>Product colours may vary slightly from images due to screen settings and lighting.</li>
+          <li>Orders are confirmed only after we acknowledge them on WhatsApp and payment/COD is agreed.</li>
+          <li>We reserve the right to cancel an order due to stock unavailability or pricing errors, with a full refund.</li>
+          <li>Promotional offers and coupons cannot be combined unless explicitly stated.</li>
+          <li>All content, images, and branding on this site belong to Geetham Sarees.</li>
+        </ul>
+        <p style="margin-top:12px;">These terms may be updated from time to time. Continued use of the site implies acceptance.</p>`
+    },
+    about: {
+      title: '💜 About Geetham Sarees',
+      html: `
+        <p><em>Draped in Elegance.</em></p>
+        <p style="margin-top:10px;">Geetham Sarees is your trusted destination for authentic Indian sarees. We bring together the finest craftsmanship from across India — from pure Kanchipuram and Banarasi silks to everyday cottons and contemporary designer drapes.</p>
+        <p style="margin-top:10px;">Every saree in our collection is handpicked for quality, texture, and timeless beauty. Whether it's a wedding, a festival, the office, or a casual day out, we have a drape for every woman and every moment.</p>
+        <p style="margin-top:10px;">We believe in honest pricing, genuine products, and personal service — which is why we work closely with every customer over WhatsApp to make your shopping effortless.</p>`
+    },
+    sizeguide: {
+      title: '📏 Size Guide',
+      html: `
+        <p>Our sarees follow standard Indian measurements:</p>
+        <ul style="margin:12px 0 0 18px;">
+          <li><strong>Saree length:</strong> 6.3 metres (including blouse piece)</li>
+          <li><strong>Blouse piece:</strong> 0.8 metres (unstitched), attached to most sarees</li>
+          <li><strong>Saree width:</strong> approx. 44–47 inches</li>
+        </ul>
+        <p style="margin-top:12px;">Sarees are free-size and drape to suit all body types. For custom blouse stitching, we'll collect your measurements over WhatsApp after your order.</p>`
+    },
+    blouse: {
+      title: '✂️ Custom Blouse Stitching',
+      html: `
+        <p>We offer expert custom blouse stitching as an add-on service.</p>
+        <ul style="margin:12px 0 0 18px;">
+          <li>Choose your preferred style — regular, padded, boat-neck, sleeveless, and more.</li>
+          <li>Share your measurements (bust, waist, shoulder, sleeve length) on WhatsApp after ordering.</li>
+          <li>Stitching adds approximately <strong>3–5 business days</strong> to delivery.</li>
+          <li>Nominal stitching charges apply, confirmed before we proceed.</li>
+        </ul>
+        <p style="margin-top:12px;">Just mention "custom blouse" when placing your WhatsApp order and we'll guide you.</p>`
+    },
+    draping: {
+      title: '🥻 Saree Draping Guide',
+      html: `
+        <p>New to draping? Here's a quick classic (Nivi) style guide:</p>
+        <ol style="margin:12px 0 0 18px;">
+          <li>Tuck one end of the saree into your petticoat at the waist and wrap it once around.</li>
+          <li>Make 5–7 even pleats, about 5 inches wide, and tuck them at the waist.</li>
+          <li>Drape the remaining fabric (pallu) over your left shoulder.</li>
+          <li>Adjust the pallu length and pin it in place for a neat finish.</li>
+        </ol>
+        <p style="margin-top:12px;">Prefer a ready look? Ask us about our <strong>pre-stitched ready-to-wear sarees</strong> that drape in seconds!</p>`
+    },
+    bulk: {
+      title: '🎁 Bulk & Wholesale Orders',
+      html: `
+        <p>Planning for a wedding, event, or reselling? We offer special pricing on bulk orders.</p>
+        <ul style="margin:12px 0 0 18px;">
+          <li>Attractive discounts on orders of 10+ sarees.</li>
+          <li>Coordinated colours and themes for bridesmaids and family functions.</li>
+          <li>Dedicated support from order to delivery.</li>
+        </ul>
+        <p style="margin-top:12px;">Message us on WhatsApp at ${WA_DISPLAY} with your requirement and we'll share a custom quote.</p>`
+    },
+  };
+
+  // Footer collection links -> filter the shop
+  function footerCategory(cat) {
+    currentCategory = cat; currentSearch = ''; currentPriceRange = 'all';
+    selectedFabrics.clear(); selectedColours.clear(); maxPrice = 35000;
+    const si = document.getElementById('searchInput'); if (si) si.value = '';
+    document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
+    const pill = Array.from(document.querySelectorAll('.cat-pill')).find(b => b.textContent.includes(cat));
+    if (pill) pill.classList.add('active');
+    applyFilters();
+    document.querySelector('.shop-layout').scrollIntoView({ behavior:'smooth' });
+  }
+
+  function openLegal(key) {
+    const item = LEGAL[key];
+    if (!item) return;
+    document.getElementById('legalTitle').textContent = item.title;
+    document.getElementById('legalBody').innerHTML = item.html;
+    document.getElementById('legalOverlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLegal() {
+    document.getElementById('legalOverlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
   // ===== INIT =====
-  renderProducts(PRODUCTS);
+  buildSidebarFilters();
+  applyFilters();
   updateCartUI();
+  updateWishCount();
   // (Admin panel removed from the public storefront — product management is
   //  handled in the separate server-side admin app.)
 </script>
